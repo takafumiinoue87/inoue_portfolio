@@ -50,6 +50,11 @@ img {
 }
 
 /* ここから */
+
+/* /* html {
+    scroll-behavior: smooth;
+    /* スムーズにスクロールさせるコード */
+
 body {
     background: #e7e7e7;
 }
@@ -106,7 +111,7 @@ nav li:hover {
 }
 
 /* Rise at... */
-.dai {
+.daimei {
     font-family: Sheila;
     font-size: 100px;
     letter-spacing: 0.05em;
@@ -162,7 +167,8 @@ nav li:hover {
 /* 自分の写真 */
 .photo img {
     width: 285px;
-    margin-left: 320px;
+    margin-left: -680px;
+    margin-top: 70px;
 }
 
 /* グレーの四角枠 */
@@ -173,8 +179,8 @@ nav li:hover {
     width: 500px;
     height: 450px;
     background: #d3d3d3;
-    margin-top: -440px;
     margin-left: 685px;
+    margin-top: -330px;
     position: relative;
 }
 
@@ -254,6 +260,68 @@ nav li:hover {
     border: none;
 }
 
+/* アニメーションボタン */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+}
+
+body:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button {
+    background: #d3d3d3;
+    color: #000000;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    padding: 0 2em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button:hover {
+    background: #000000;
+    color: #c4b69a;
+}
+
+button:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #d3d3d3;
+    transition: 400ms ease all;
+}
+
+button:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+/* ↑ここまでアニメーションボタン */
+
 /* ここからsection third */
 /* SKILL */
 .skill {
@@ -262,7 +330,8 @@ nav li:hover {
     letter-spacing: 0.1em;
     color: #000000;
     text-align: center;
-    margin-top: 120px;
+    margin-top: 90px;
+    padding-top: 30px;
 }
 
 /* できること */
@@ -286,11 +355,21 @@ nav li:hover {
     margin-top: 40px;
 }
 
-/* SKILL画像 */
-.mark {
-    text-align: center;
-    margin-top: 65px;
+/* SKILL画像のul */
+.pc_skillmark {
     margin-bottom: 120px;
+    margin-top: 65px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* SKILL画像のli */
+.skillmark {
+    width: 120px;
+    height: 120px;
+    margin-right: 40px;
+    text-align: center;
+    margin: auto;
 }
 
 /* ここからsection fourth */
@@ -360,6 +439,66 @@ nav li:hover {
     border: none;
     margin-top: 50px;
 }
+
+/* アニメーションボタン */
+html,
+body {
+    height: 100%;
+}
+
+body {
+    text-align: center;
+}
+
+body:before {
+    content: '';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+button1 {
+    background: #6b82a8;
+    color: #ffffff;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+}
+
+button1:hover {
+    background: #000000;
+    color: #c4b69a;
+}
+
+button1:before,
+button1:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #adbabe;
+    transition: 400ms ease all;
+}
+
+button1:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+button1:hover:before,
+button1:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
+
+/* ↑ここまでアニメーションボタン */
+
 
 /* ここからsection fifth */
 /* CONTACT欄全体 */
@@ -457,7 +596,8 @@ form .bg-color {
     margin-bottom: 90px;
 }
 
-.submit-btn {
+/* 送信ボタン */
+.submit-btn input {
     font-family: 游ゴシック;
     width: 320px;
     height: 50px;
@@ -470,9 +610,14 @@ form .bg-color {
     cursor: pointer;
     border: none;
     margin: auto;
-    box-shadow: 6px 6px 3px #666666;
     /* 影の設定 */
+    box-shadow: 6px 6px 3px #666666;
+}
 
+/* 送信ボタンにカーソルが当たるとボタンが下がる動き */
+.submit-btn input:hover {
+    box-shadow: none;
+    transform: translate(0, 5px);
 }
 
 /* フッターロゴ */
@@ -482,31 +627,37 @@ form .bg-color {
     text-align: center;
 }
 
-nav {
+/* フッターのメニュー */
+nav1 {
     text-align: left;
     margin-left: 75px;
     margin-bottom: 60px;
     justify-content: space-between;
 }
 
-nav ul {
+nav1 ul {
     margin: 0;
     padding: 0;
     font-family: 游明朝;
     font-size: 15px;
 }
 
-nav ul li {
-    margin-right: 10px;
+nav1 .ABOUTa,
+.SKILLa,
+.WORKa,
+.CONTACTa {
+    margin-right: 100px;
     list-style: none;
     display: inline-block;
-    width: 10%;
+    color: #000000;
+    /* text-decoration: underline; */
+    /* width: 10%; */
     /* ここで項目の幅を指定します */
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
+
 }
 
 nav li:hover {
@@ -519,6 +670,57 @@ nav li:hover {
     font-family: 游明朝;
     font-size: 20px;
     text-align: center;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
     color: #000000;
+}
+
+
+/* スマホ対応↓ */
+@media screen and (max-width:374px) {
+
+    /* html {
+        scroll-behavior: smooth;
+        スムーズにスクロールさせるコード 
+}*/
+    .sunrise img {
+        width: 100%;
+    }
+
+    .header_wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 6.53% 0 2.51%;
+        position: absolute;
+        /* サイト全体からの位置取り */
+        top: 0;
+        left: 0;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 100;
+    }
+
+    .header_logo {
+        width: 226.76px;
+    }
+
+    .pc_nav ul {
+        display: flex;
+
+    }
+
+    .pc_nav li {
+        width: 104px;
+        margin-right: 55px;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+
+    }
+
+    .pc_nav ul li:last-child {
+        margin-right: 0;
+    }
 }
