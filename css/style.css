@@ -51,26 +51,36 @@ img {
 
 /* ここから */
 
-/* /* html {
+html {
     scroll-behavior: smooth;
     /* スムーズにスクロールさせるコード */
+}
 
 body {
     background: #e7e7e7;
+    max-width: 1366px;
+}
+
+.menubar {
+    max-width: 1000px;
+    display: flex;
+    margin: auto;
+    /* MENUbar追跡 ↓２つ*/
+    position: fixed;
+    width: 100%;
 }
 
 /* ロゴ指定 */
 .logo {
     text-align: left;
     margin-left: 180px;
-    margin-top: 200px;
-    background: #e7e7e7;
+    margin-top: 60px;
 }
 
 
 nav {
     text-align: right;
-    margin-right: 110px;
+    margin-left: 110px;
     margin-top: 80px;
     justify-content: space-between;
 }
@@ -117,8 +127,9 @@ nav li:hover {
     letter-spacing: 0.05em;
     color: black;
     margin-top: 200px;
-    margin-left: 175px;
+    padding-left: 130px;
     padding-right: 50px;
+    float: left;
 }
 
 /*コンセプト文章 */
@@ -129,7 +140,7 @@ nav li:hover {
     font-size: 17px;
     line-height: 2.64em;
     letter-spacing: 0.05em;
-    margin: 30px 0 0 180px;
+    margin: 30px 0 0 160px;
 }
 
 /* scroll表記 */
@@ -141,47 +152,111 @@ nav li:hover {
     left: 13%;
     /* ↓文字を横のまま縦書きに変える記述 */
     writing-mode: vertical-rl;
-    margin-top: 620px;
+    margin-top: 700px;
 }
 
+
+/* scrollのlineのアニメーション */
+/*====== 9-1-1 縦線が動いてスクロールを促す =======*/
+
+/*スクロールダウン全体の場所*/
 /* スクロール横のライン */
 .line {
-    border-left: medium solid #000000;
-    height: 120px;
+    /* border-left: medium solid #000000; */
+    height: 300px;
     position: absolute;
     left: 12%;
-    margin-top: 620px;
+    margin-top: 700px;
+    /*描画位置※位置は適宜調整してください*/
+    position: absolute;
+    /* left: 50%;
+    bottom: 10px; */
+    /*全体の高さ*/
+    height: 100px;
+}
+
+/*Scrollテキストの描写*/
+/* .line span { */
+/*描画位置*/
+/* position: absolute;
+    left: -15px;
+    top: -15px; */
+/*テキストの形状*/
+/* color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+} */
+
+/* 線の描写 */
+.line::after {
+    content: "";
+    /*描画位置*/
+    position: absolute;
+    top: 0;
+    /*線の形状*/
+    width: 2px;
+    height: 100px;
+    background: #000000;
+    /*線の動き1.4秒かけて動く。永遠にループ*/
+    animation: pathmove 2s ease-in-out infinite;
+    opacity: 0;
+}
+
+@keyframes pathmove {
+    0% {
+        height: 0;
+        top: 0;
+        opacity: 0;
+    }
+
+    30% {
+        height: 30px;
+        opacity: 1;
+    }
+
+    100% {
+        height: 0;
+        top: 50px;
+        opacity: 0;
+    }
 }
 
 /* first view写真設定 */
 .sunrise img {
-    width: 700px;
-    text-align: center;
+    width: 680px;
+    float: right;
     padding-top: 135px;
-    padding-right: 105px;
+    padding-right: 30px;
     margin-bottom: 75px;
 }
 
 /* ここからsection seconde */
+/* 自分の写真と右のフレームを1000pxでとってその後に写真の左に100px入れる */
+.seconde {
+    max-width: 1000px;
+    padding-left: 100px;
+    text-align: center;
+    margin: auto;
+}
 
 /* 自分の写真 */
 .photo img {
-    width: 285px;
-    margin-left: -680px;
+    width: 245px;
+    height: 350px;
     margin-top: 70px;
+    margin-left: 300px;
 }
 
 /* グレーの四角枠 */
 .flame {
-    /* display: flex;
-    padding: 1em;
-    margin: 2em auto; */
     width: 500px;
     height: 450px;
     background: #d3d3d3;
     margin-left: 685px;
-    margin-top: -330px;
+    margin-top: -430px;
     position: relative;
+    text-align: center;
+
 }
 
 /* Instagramアイコン */
@@ -244,10 +319,11 @@ nav li:hover {
 }
 
 /* 角丸ボタン */
-.kadomaru {
+.prof {
     font-family: 游明朝;
     width: 320px;
     height: 50px;
+    line-height: 50px;
     font-size: 20px;
     letter-spacing: 0.1;
     display: block;
@@ -261,23 +337,7 @@ nav li:hover {
 }
 
 /* アニメーションボタン */
-html,
-body {
-    height: 100%;
-}
-
-body {
-    text-align: center;
-}
-
-body:before {
-    content: '';
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-button {
+p a {
     background: #d3d3d3;
     color: #000000;
     border: none;
@@ -290,13 +350,13 @@ button {
     outline: none;
 }
 
-button:hover {
+p a:hover {
     background: #000000;
     color: #c4b69a;
 }
 
-button:before,
-button:after {
+p a:before,
+p a:after {
     content: '';
     position: absolute;
     top: 0;
@@ -307,14 +367,14 @@ button:after {
     transition: 400ms ease all;
 }
 
-button:after {
+p a:after {
     right: inherit;
     top: inherit;
     left: 0;
     bottom: 0;
 }
 
-button:hover:before,
+p a:hover:before,
 button:hover:after {
     width: 100%;
     transition: 800ms ease all;
@@ -323,6 +383,13 @@ button:hover:after {
 /* ↑ここまでアニメーションボタン */
 
 /* ここからsection third */
+.third {
+    max-width: 750px;
+    text-align: center;
+    margin: auto;
+}
+
+
 /* SKILL */
 .skill {
     font-family: 游明朝;
@@ -373,6 +440,12 @@ button:hover:after {
 }
 
 /* ここからsection fourth */
+/* .fourth {
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
+} */
+
 /* グレーの四角枠 */
 .big_flame {
     width: 1366px;
@@ -384,6 +457,9 @@ button:hover:after {
 
 /* WORK */
 .work {
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
     padding-top: 100px;
     font-family: 游明朝;
     font-size: 40px;
@@ -393,6 +469,9 @@ button:hover:after {
 
 /* 制作物 */
 .seisaku {
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
     padding-top: 20px;
     font-family: 游ゴシック;
     font-size: 16px;
@@ -402,6 +481,9 @@ button:hover:after {
 
 /* WORK画像全体 ul */
 .pc_work {
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -415,17 +497,26 @@ button:hover:after {
 .work4,
 .work5,
 .work6 {
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
     width: 300px;
     height: 320px;
-    padding-right: 50px;
+    padding-right: 30px;
     padding-bottom: 50px;
+    justify-content: space-between;
 }
 
 /* VIEW MOREボタン */
-.view {
+/* 文字が１行の時はline-heightとheightの値を同じにすれば垂直方向に均等になる */
+.more {
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
     font-family: 游明朝;
     width: 320px;
     height: 50px;
+    line-height: 50px;
     font-size: 23px;
     letter-spacing: 0.1;
     display: block;
@@ -441,23 +532,8 @@ button:hover:after {
 }
 
 /* アニメーションボタン */
-html,
-body {
-    height: 100%;
-}
 
-body {
-    text-align: center;
-}
-
-body:before {
-    content: '';
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-}
-
-button1 {
+.a {
     background: #6b82a8;
     color: #ffffff;
     border: none;
@@ -467,13 +543,13 @@ button1 {
     outline: none;
 }
 
-button1:hover {
+.a:hover {
     background: #000000;
     color: #c4b69a;
 }
 
-button1:before,
-button1:after {
+.a:before,
+.a:after {
     content: '';
     position: absolute;
     top: 0;
@@ -484,15 +560,15 @@ button1:after {
     transition: 400ms ease all;
 }
 
-button1:after {
+.a:after {
     right: inherit;
     top: inherit;
     left: 0;
     bottom: 0;
 }
 
-button1:hover:before,
-button1:hover:after {
+.a:hover:before,
+.a:hover:after {
     width: 100%;
     transition: 800ms ease all;
 }
@@ -504,6 +580,8 @@ button1:hover:after {
 /* CONTACT欄全体 */
 .mail {
     text-align: center;
+    max-width: 1000px;
+    margin: auto;
 }
 
 /* CONTACT */
@@ -545,7 +623,7 @@ button1:hover:after {
 
 /* 氏名、企業名等題名 */
 dt {
-    margin: 40px 0 20px 260px;
+    margin: 40px 0 20px 0;
     text-align: left;
     color: #000000;
 }
@@ -628,7 +706,7 @@ form .bg-color {
 }
 
 /* フッターのメニュー */
-nav1 {
+/* nav1 {
     text-align: left;
     margin-left: 75px;
     margin-bottom: 60px;
@@ -651,19 +729,10 @@ nav1 .ABOUTa,
     display: inline-block;
     color: #000000;
     /* text-decoration: underline; */
-    /* width: 10%; */
-    /* ここで項目の幅を指定します */
-}
+/* width: 10%; */
+/* ここで項目の幅を指定します */
+/*  */
 
-nav ul li a {
-    text-decoration: none;
-
-}
-
-nav li:hover {
-    border-bottom: 2px solid #b0c0c7;
-    /* 下線の太さや色を指定 */
-}
 
 /* Ⓒ文章 */
 .pc_last {
@@ -672,6 +741,7 @@ nav li:hover {
     text-align: center;
     padding-bottom: 60px;
     color: #000000;
+    margin: auto;
 }
 
 
