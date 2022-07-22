@@ -1,0 +1,524 @@
+@charset "utf-8";
+
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #4f260b;
+    font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
+        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
+        "ＭＳ 明朝", "Sheila", "游ゴシック" serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* ここから */
+body {
+    background: #e7e7e7;
+}
+
+/* ロゴ指定 */
+.logo {
+    text-align: left;
+    margin-left: 180px;
+    margin-top: 200px;
+    background: #e7e7e7;
+}
+
+
+nav {
+    text-align: right;
+    margin-right: 110px;
+    margin-top: 80px;
+    justify-content: space-between;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    font-family: 游明朝;
+    font-size: 15px;
+}
+
+nav ul li {
+    margin-right: 90px;
+    list-style: none;
+    display: inline-block;
+    width: 10%;
+    /* ここで項目の幅を指定します */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* メニュー　hover時に下線を出す */
+nav li:hover {
+    border-bottom: 2px solid #b0c0c7;
+    /* 下線の太さや色を指定 */
+}
+
+.first {
+    display: flex;
+}
+
+.firstview {
+    display: flex;
+    flex-flow: column;
+}
+
+/* Rise at... */
+.dai {
+    font-family: Sheila;
+    font-size: 100px;
+    letter-spacing: 0.05em;
+    color: black;
+    margin-top: 200px;
+    margin-left: 175px;
+    padding-right: 50px;
+}
+
+/*コンセプト文章 */
+.consept {
+    color: black;
+    font-family: 游ゴシック;
+    font-weight: Medium;
+    font-size: 17px;
+    line-height: 2.64em;
+    letter-spacing: 0.05em;
+    margin: 30px 0 0 180px;
+}
+
+/* scroll表記 */
+.scroll {
+    font-family: 游明朝;
+    font-size: 12px;
+    letter-spacing: 0.05em;
+    position: absolute;
+    left: 13%;
+    /* ↓文字を横のまま縦書きに変える記述 */
+    writing-mode: vertical-rl;
+    margin-top: 620px;
+}
+
+/* スクロール横のライン */
+.line {
+    border-left: medium solid #000000;
+    height: 120px;
+    position: absolute;
+    left: 12%;
+    margin-top: 620px;
+}
+
+/* first view写真設定 */
+.sunrise img {
+    width: 700px;
+    text-align: center;
+    padding-top: 135px;
+    padding-right: 105px;
+    margin-bottom: 75px;
+}
+
+/* ここからsection seconde */
+
+/* 自分の写真 */
+.photo img {
+    width: 285px;
+    margin-left: 320px;
+}
+
+/* グレーの四角枠 */
+.flame {
+    /* display: flex;
+    padding: 1em;
+    margin: 2em auto; */
+    width: 500px;
+    height: 450px;
+    background: #d3d3d3;
+    margin-top: -440px;
+    margin-left: 685px;
+    position: relative;
+}
+
+/* Instagramアイコン */
+.icon img {
+    position: absolute;
+    left: 80%;
+    top: 8%;
+}
+
+/* ABOUT */
+.ABOUT {
+    font-family: 游明朝;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    text-align: left;
+    position: absolute;
+    left: 9%;
+    top: 8%;
+    color: #000000;
+}
+
+/* 私について */
+.about {
+    font-family: 游ゴシック;
+    font-size: 16px;
+    letter-spacing: 0.05em;
+    text-align: left;
+    position: absolute;
+    left: 12%;
+    top: 22%;
+    color: #000000;
+}
+
+/* 名前 */
+.name {
+    font-family: 游ゴシック;
+    font-size: 25px;
+    letter-spacing: 0.1em;
+    padding: 160px 0 25px 65px;
+    color: #000000;
+}
+
+/* ローマ字 */
+.name span {
+    font-family: 游明朝;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    padding-left: 60px;
+    color: #000000;
+}
+
+/* 趣味等説明文 */
+.setumei {
+    font-family: 游ゴシック;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    line-height: 1.7em;
+    margin-left: 55px;
+    color: #000000;
+}
+
+/* 角丸ボタン */
+.kadomaru {
+    font-family: 游明朝;
+    width: 320px;
+    height: 50px;
+    font-size: 20px;
+    letter-spacing: 0.1;
+    display: block;
+    background: #c4b69a;
+    border-radius: 20px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 7%;
+    left: 85px;
+    border: none;
+}
+
+/* ここからsection third */
+/* SKILL */
+.skill {
+    font-family: 游明朝;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    text-align: center;
+    margin-top: 120px;
+}
+
+/* できること */
+.can {
+    font-family: 游ゴシック;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* デザインから～文章 */
+.omoi {
+    font-family: 游ゴシック;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+    line-height: 1.73em;
+    color: #000000;
+    text-align: center;
+    margin-top: 40px;
+}
+
+/* SKILL画像 */
+.mark {
+    text-align: center;
+    margin-top: 65px;
+    margin-bottom: 120px;
+}
+
+/* ここからsection fourth */
+/* グレーの四角枠 */
+.big_flame {
+    width: 1366px;
+    height: 1250px;
+    background-color: #adbabe;
+    text-align: center;
+    margin: auto;
+}
+
+/* WORK */
+.work {
+    padding-top: 100px;
+    font-family: 游明朝;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+
+/* 制作物 */
+.seisaku {
+    padding-top: 20px;
+    font-family: 游ゴシック;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #ffffff;
+}
+
+/* WORK画像全体 ul */
+.pc_work {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 140px 130px 0 180px;
+}
+
+/* WORK画像全体 li */
+.work1,
+.work2,
+.work3,
+.work4,
+.work5,
+.work6 {
+    width: 300px;
+    height: 320px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+}
+
+/* VIEW MOREボタン */
+.view {
+    font-family: 游明朝;
+    width: 320px;
+    height: 50px;
+    font-size: 23px;
+    letter-spacing: 0.1;
+    display: block;
+    background: #6b82a8;
+    color: #ffffff;
+    border-radius: 20px;
+    cursor: pointer;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 130px;
+    border: none;
+    margin-top: 50px;
+}
+
+/* ここからsection fifth */
+/* CONTACT欄全体 */
+.mail {
+    text-align: center;
+}
+
+/* CONTACT */
+.toi {
+    font-family: 游明朝;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    color: #717ae4;
+    padding-top: 100px;
+}
+
+/* ロゴ／～受ける仕事内容 */
+.sigoto {
+    font-family: 游ゴシック;
+    font-size: 23px;
+    letter-spacing: 0.1em;
+    color: #717ae4;
+    padding-top: 100px;
+}
+
+/* ご相談～お願い文 */
+.irai {
+    font-family: 游ゴシック;
+    font-size: 23px;
+    letter-spacing: 0.1em;
+    color: #717ae4;
+    padding-top: 30px;
+}
+
+/* 必須～注意文 */
+.mandatory {
+    font-family: 游ゴシック;
+    font-size: 23px;
+    letter-spacing: 0.1em;
+    color: #ff0000;
+    padding-top: 20px;
+    padding-bottom: 60px;
+}
+
+/* 氏名、企業名等題名 */
+dt {
+    margin: 40px 0 20px 260px;
+    text-align: left;
+    color: #000000;
+}
+
+/* ※必須文字 */
+dt span {
+    color: red;
+}
+
+/* 氏名の枠の中 */
+form .default {
+    width: 1000px;
+    height: 50px;
+    border: none;
+    font-size: 25px;
+}
+
+/* フリガナの枠の中 */
+form .solid {
+    width: 1000px;
+    height: 50px;
+    border: none;
+    font-size: 25px;
+}
+
+/* 企業名の枠の中 */
+form .dotted {
+    width: 1000px;
+    height: 50px;
+    border: none;
+    font-size: 25px;
+}
+
+/* メールアドレスの枠の中 */
+form .dotted-bold {
+    width: 1000px;
+    height: 50px;
+    border: none;
+    font-size: 25px;
+}
+
+/* お問い合わせの枠の中 */
+form .bg-color {
+    width: 1000px;
+    height: 350px;
+    border: none;
+    font-size: 25px;
+    margin-bottom: 90px;
+}
+
+.submit-btn {
+    font-family: 游ゴシック;
+    width: 320px;
+    height: 50px;
+    font-size: 22px;
+    letter-spacing: 0.1;
+    display: block;
+    color: #000000;
+    background: #c4b69a;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    margin: auto;
+    box-shadow: 6px 6px 3px #666666;
+    /* 影の設定 */
+
+}
+
+/* フッターロゴ */
+.footer_logo {
+    margin-top: 90px;
+    margin-bottom: 100px;
+    text-align: center;
+}
+
+nav {
+    text-align: left;
+    margin-left: 75px;
+    margin-bottom: 60px;
+    justify-content: space-between;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    font-family: 游明朝;
+    font-size: 15px;
+}
+
+nav ul li {
+    margin-right: 10px;
+    list-style: none;
+    display: inline-block;
+    width: 10%;
+    /* ここで項目の幅を指定します */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+nav li:hover {
+    border-bottom: 2px solid #b0c0c7;
+    /* 下線の太さや色を指定 */
+}
+
+/* Ⓒ文章 */
+.pc_last {
+    font-family: 游明朝;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 60px;
+    color: #000000;
+}

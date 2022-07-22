@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="自己紹介,portfolio,profile,webdesign,コーディング,マークアップ,マークアップ言語,プログラミング,HTML,CSS">
+    <meta name="description" content="portfolioサイトです。HTML,CSS,jQuery等を使用し作成しています。">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <!-- ヘッダー -->
+    <header>
+        <div class="logo">
+            <img src="ポートフォリオファイル/使用素材/pc_logo.jpg" alt="Riseatのロゴ"><!-- メニューバーにロゴを表示する -->
+        </div>
+        <nav>
+            <ul>
+                <li><a href=”#ABOUT”>ABOUT</a></li>
+                <li><a href=”#SKILL”>SKILL</a></li>
+                <li><a href=”#WORK”>WORK</a></li>
+                <li><a href=”#CONTACT”>CONTACT</a></li>
+            </ul>
+        </nav>
+        <!-- firstview欄 -->
+        <section class="first">
+            <div class="firstview">
+                <h1 class="dai">Rise at...</h1>
+                <p class="consept">朝日のように<br>心が明るくなるような<br>デザインを作りたい<br>そんなデザインを<br>一緒に作らせてください。</p>
+                <p class="scroll">SCROLL</p>
+                <p class="line"></p>
+            </div>
+            <div class="sunrise">
+                <img src="ポートフォリオファイル/使用素材/sun rise.jpg" alt="firstviewの日の出の写真">
+            </div>
+        </section>
+        <!-- ABOUT欄 -->
+        <section class="second">
+            <div class="photo">
+                <img src="ポートフォリオファイル/使用素材/自己紹介写真.jpg" alt="自己紹介の製作者の写真">
+            </div>
+
+            <div class="flame">
+                <div class="icon">
+                    <img src="ポートフォリオファイル/使用素材/instagram_icon.jpg" alt="Instagramのアイコン画像">
+                </div>
+                <h2 id="ABOUT"></h2>
+                <h2 class="ABOUT">ABOUT</h2>
+                <p class="about">私について</p>
+                <div class="name">井上 貴史<span>INOUE TAKAFUMI</span></div>
+                <div class="setumei">趣味:キャンプ/ゴルフ/野球<br>妻と娘2人にホーランドロップ［うさぎ］<br>毎日全力で生きてます！<br>よろしければPROFILEも見ていって下さい。
+                </div>
+                <button class="kadomaru">PROFILE</button>
+            </div>
+        </section>
+        <!-- SKILL画像 -->
+        <section class="third">
+            <div class="skill">SKILL</div>
+            <div class="can">できること</div>
+            <p class="omoi">デザインからコーディングまでトータルにお手伝いさせていただきます。<br>親身なヒアリングから納品まで安心してお任せください。</p>
+            <div class="mark">
+                <img src="ポートフォリオファイル/使用素材/pc_skill.jpg" alt="5つあるSKILLの画像">
+            </div>
+        </section>
+        <!-- 制作物一覧 -->
+        <section class="fourth">
+            <div class="big_flame">
+                <div class="work">WORK</div>
+                <div class="seisaku">制作物</div>
+                <ul class="pc_work">
+                    <li class="work1"><img src="ポートフォリオファイル/使用素材/pc_ロゴデザイン.jpg" alt="6枚の制作物の画像"></li>
+                    <li class="work2"><img src="ポートフォリオファイル/使用素材/pc_企業紹介LP.jpg" alt="6枚の制作物の画像"></li>
+                    <li class="work3"><img src="ポートフォリオファイル/使用素材/pc_化粧品バナー.jpg" alt="6枚の制作物の画像"></li>
+                    <li class="work4"><img src="ポートフォリオファイル/使用素材/pc_デザイン.jpg" alt="6枚の制作物の画像"></li>
+                    <li class="work5"><img src="ポートフォリオファイル/使用素材/pc_キャンプ場バナー.jpg" alt="6枚の制作物の画像"></li>
+                    <li class="work6"><img src="ポートフォリオファイル/使用素材/pc_オンラインスクールバナー.jpg" alt="6枚の制作物の画像"></li>
+                </ul>
+                <button class="view">VIEW MORE</button>
+            </div>
+        </section>
+        <!-- お問い合わせフォーム -->
+        <section class="fifth">
+            <div class="mail">
+                <div class="toi">CONTACT</div>
+                <p class="sigoto">ロゴ/名刺/チラシ/バナー広告/フライヤー/LP等作成承ります</p>
+                <p class="irai">ご相談、ご依頼等お気軽にご連絡ください!</p>
+                <p class="mandatory">（※必須）は必ずご入力下さい。</p>
+                <!-- お問い合わせフォーム メール欄 -->
+                <form>
+                    <dl>
+                        <dt>氏 名<span>（※必須）</span></dt>
+                        <dd>
+                            <input class="default" />
+                        </dd>
+                        <dt>フリガナ<span>（※必須）</span></dt>
+                        <dd>
+                            <input class="solid" />
+                        </dd>
+                        <dt>企業名</dt>
+                        <dd>
+                            <input class="dotted" />
+                        </dd>
+                        <dt>メールアドレス<span>（※必須）</span></dt>
+                        <dd>
+                            <input class="dotted-bold" />
+                        </dd>
+                        <dt>お問い合わせ内容<span>（※必須）</span></dt>
+                        <dd>
+                            <input class="bg-color" />
+                        </dd>
+                        <div class="submit-btn">
+                            <input type="submit" value="送             信" />
+                        </div>
+                        <!-- 項目を出すメニュー -->
+                        <!-- <select name="purpose" class="dotted-bold">
+                                <option value=""></option>
+                                <option value="項目1">項目1</option>
+                                <option value="項目2">項目2</option>
+                                <option value="項目3">項目3</option>
+                            </select>
+                        </dd> -->
+                    </dl>
+                </form>
+            </div>
+        </section>
+        <footer>
+            <div class="footer_logo">
+                <img src="ポートフォリオファイル/使用素材/pc_footer_logo.jpg" alt="Riseatのロゴ"><!-- フッターにロゴを表示する -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href=”#”>ABOUT</a></li>
+                    <li><a href=”#”>SKILL</a></li>
+                    <li><a href=”#”>WORK</a></li>
+                    <li><a href=”#”>CONTACT</a></li>
+                </ul>
+            </nav>
+            <div class="pc_last">© 2022 Rise at</div>
+        </footer>
+</body>
+
+</html>
