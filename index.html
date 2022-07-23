@@ -16,10 +16,24 @@
 <body>
     <!-- ヘッダー -->
     <header class="menubar">
-        <div class="logo">
+        <div class="pc_logo">
             <img src="portfolio_file/material_file/riseat_logo_black.png" alt="Riseatのロゴ"><!-- メニューバーにロゴを表示する -->
         </div>
-        <nav>
+        <nav class="pc_nav">
+            <ul>
+                <li><a href="#ABOUT">ABOUT</a></li>
+                <li><a href="#SKILL">SKILL</a></li>
+                <li><a href="#WORK">WORK</a></li>
+                <li><a href="#CONTACT">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <!-- スマホヘッダー -->
+        <div class="sp_logo">
+            <img src="portfolio_file/material_file/sp_logo_white.png" alt="Riseatのロゴ"><!-- スマホメニューバーにロゴを表示する -->
+        </div>
+        <div class="btn"><span></span></div>
+        <nav class="sp_nav">
             <ul>
                 <li><a href="#ABOUT">ABOUT</a></li>
                 <li><a href="#SKILL">SKILL</a></li>
@@ -47,7 +61,7 @@
         </div>
         <div class="flame">
             <div class="icon">
-                <img src="portfolio_file/material_file/Instagram_icon.png" alt="Instagramのアイコン画像">
+                <a href="URL"><img src="portfolio_file/material_file/Instagram_icon.png" alt="Instagramのアイコン画像"></a>
             </div>
             <h2 id="ABOUT"></h2>
             <!-- <h2 id="ABOUT1"></h2> -->
@@ -58,7 +72,9 @@
             </div>
 
             <!-- PROFILE.htmlを作ったらURLを書き込む -->
-            <p><a class="prof" href="URL">PROFILE</a></p>
+            <div class="black">
+                <a class="prof" href="URL">PROFILE</a>
+            </div>
             <!-- <button class="kadomaru">PROFILE</button> -->
         </div>
     </section>
@@ -151,7 +167,7 @@
             </form>
         </div>
     </section>
-    <footer>
+    <footer class="footer">
         <div class="footer_logo">
             <img src="portfolio_file/material_file/riseat_logo_big.png" alt="Riseatのロゴ"><!-- フッターにロゴを表示する -->
         </div>
@@ -165,6 +181,14 @@
         </nav1> -->
         <div class="pc_last">© 2022 Rise at</div>
     </footer>
+    <script>
+        $(function () {
+            $('.btn,.sp_nav li').click(function () {
+                $('.sp_nav').fadeToggle();
+                $('.btn').toggleClass('open');
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -19,10 +19,8 @@ dd {
     margin: 0;
     padding: 0;
     line-height: 1;
-    color: #4f260b;
-    font-family: "A1 Mincho", "游明朝", YuMincho, "Hiragino Mincho ProN W3",
-        "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝",
-        "ＭＳ 明朝", "Sheila", "游ゴシック" serif;
+    color: #000000;
+    font-family: "A1 Mincho", "游明朝", YuMincho, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", "Sheila", sans-serif;
     font-feature-settings: "palt";
 }
 
@@ -58,61 +56,73 @@ html {
 
 body {
     background: #e7e7e7;
-    max-width: 1366px;
 }
 
 .menubar {
     max-width: 1000px;
     display: flex;
     margin: auto;
+    margin-bottom: 70px;
     /* MENUbar追跡 ↓２つ*/
     position: fixed;
     width: 100%;
 }
 
 /* ロゴ指定 */
-.logo {
+.pc_logo {
     text-align: left;
-    margin-left: 180px;
-    margin-top: 60px;
+    padding-left: 210px;
+    margin-top: 200px;
+    display: block;
+}
+
+.sp_logo {
+    display: none;
+}
+
+.sp_nav {
+    display: none;
 }
 
 
-nav {
+.pc_nav {
     text-align: right;
-    margin-left: 110px;
     margin-top: 80px;
+    margin-bottom: 50px;
     justify-content: space-between;
 }
 
-nav ul {
+.pc_nav ul {
     margin: 0;
     padding: 0;
     font-family: 游明朝;
     font-size: 15px;
+    display: flex;
+    margin-left: 450px;
 }
 
-nav ul li {
+.pc_nav ul li {
     margin-right: 90px;
     list-style: none;
     display: inline-block;
-    width: 10%;
     /* ここで項目の幅を指定します */
 }
 
-nav ul li a {
+.pc_nav ul li a {
     text-decoration: none;
     color: #333;
 }
 
 /* メニュー　hover時に下線を出す */
-nav li:hover {
+.pc_nav li:hover {
     border-bottom: 2px solid #b0c0c7;
     /* 下線の太さや色を指定 */
 }
 
 .first {
     display: flex;
+    text-align: center;
+    padding-left: 160px;
 }
 
 .firstview {
@@ -127,20 +137,24 @@ nav li:hover {
     letter-spacing: 0.05em;
     color: black;
     margin-top: 200px;
-    padding-left: 130px;
     padding-right: 50px;
     float: left;
 }
 
 /*コンセプト文章 */
-.consept {
+.pc_consept {
+    text-align: left;
     color: black;
     font-family: 游ゴシック;
     font-weight: Medium;
     font-size: 17px;
     line-height: 2.64em;
     letter-spacing: 0.05em;
-    margin: 30px 0 0 160px;
+    margin-top: 30px;
+}
+
+.sp_concept {
+    display: none;
 }
 
 /* scroll表記 */
@@ -223,9 +237,9 @@ nav li:hover {
 
 /* first view写真設定 */
 .sunrise img {
-    width: 680px;
+    width: 700px;
     float: right;
-    padding-top: 135px;
+    margin-top: 135px;
     padding-right: 30px;
     margin-bottom: 75px;
 }
@@ -241,10 +255,10 @@ nav li:hover {
 
 /* 自分の写真 */
 .photo img {
-    width: 245px;
-    height: 350px;
+    width: 285px;
+    height: 390px;
     margin-top: 70px;
-    margin-left: 300px;
+    margin-left: 290px;
 }
 
 /* グレーの四角枠 */
@@ -255,15 +269,12 @@ nav li:hover {
     margin-left: 685px;
     margin-top: -430px;
     position: relative;
-    text-align: center;
-
 }
 
 /* Instagramアイコン */
 .icon img {
-    position: absolute;
-    left: 80%;
-    top: 8%;
+    padding-left: 390px;
+    padding-top: 30px;
 }
 
 /* ABOUT */
@@ -295,7 +306,7 @@ nav li:hover {
     font-family: 游ゴシック;
     font-size: 25px;
     letter-spacing: 0.1em;
-    padding: 160px 0 25px 65px;
+    padding: 85px 0 25px 65px;
     color: #000000;
 }
 
@@ -319,7 +330,7 @@ nav li:hover {
 }
 
 /* 角丸ボタン */
-.prof {
+.black {
     font-family: 游明朝;
     width: 320px;
     height: 50px;
@@ -331,13 +342,14 @@ nav li:hover {
     border-radius: 20px;
     cursor: pointer;
     position: absolute;
-    bottom: 7%;
+    bottom: 10%;
     left: 85px;
     border: none;
+    text-align: center;
 }
 
 /* アニメーションボタン */
-p a {
+.black .prof {
     background: #d3d3d3;
     color: #000000;
     border: none;
@@ -350,13 +362,13 @@ p a {
     outline: none;
 }
 
-p a:hover {
+.black .prof:hover {
     background: #000000;
     color: #c4b69a;
 }
 
-p a:before,
-p a:after {
+.black .prof:before,
+.black .prof:after {
     content: '';
     position: absolute;
     top: 0;
@@ -367,15 +379,15 @@ p a:after {
     transition: 400ms ease all;
 }
 
-p a:after {
+.black .prof:after {
     right: inherit;
     top: inherit;
     left: 0;
     bottom: 0;
 }
 
-p a:hover:before,
-button:hover:after {
+.black .prof:hover:before,
+.black .prof:hover:after {
     width: 100%;
     transition: 800ms ease all;
 }
@@ -384,7 +396,7 @@ button:hover:after {
 
 /* ここからsection third */
 .third {
-    max-width: 750px;
+    max-width: 1000px;
     text-align: center;
     margin: auto;
 }
@@ -434,7 +446,7 @@ button:hover:after {
 .skillmark {
     width: 120px;
     height: 120px;
-    margin-right: 40px;
+    /* margin-right: 40px; */
     text-align: center;
     margin: auto;
 }
@@ -533,7 +545,7 @@ button:hover:after {
 
 /* アニメーションボタン */
 
-.a {
+a {
     background: #6b82a8;
     color: #ffffff;
     border: none;
@@ -543,32 +555,33 @@ button:hover:after {
     outline: none;
 }
 
-.a:hover {
+/* カーソルが当たった後のボタンと文字の変更色 */
+a:hover {
     background: #000000;
     color: #c4b69a;
 }
 
-.a:before,
-.a:after {
+a:before,
+a:after {
     content: '';
     position: absolute;
     top: 0;
     right: 0;
     height: 2px;
     width: 0;
-    background: #adbabe;
+    background: #a3b0b4;
     transition: 400ms ease all;
 }
 
-.a:after {
+a:after {
     right: inherit;
     top: inherit;
     left: 0;
     bottom: 0;
 }
 
-.a:hover:before,
-.a:hover:after {
+a:hover:before,
+a:hover:after {
     width: 100%;
     transition: 800ms ease all;
 }
@@ -617,8 +630,9 @@ button:hover:after {
     font-size: 23px;
     letter-spacing: 0.1em;
     color: #ff0000;
-    padding-top: 20px;
+    padding-top: 30px;
     padding-bottom: 60px;
+    font-weight: bold;
 }
 
 /* 氏名、企業名等題名 */
@@ -631,6 +645,7 @@ dt {
 /* ※必須文字 */
 dt span {
     color: red;
+    font-weight: bold;
 }
 
 /* 氏名の枠の中 */
@@ -698,9 +713,16 @@ form .bg-color {
     transform: translate(0, 5px);
 }
 
+/* フッター */
+.footer {
+    max-width: 1000px;
+    text-align: center;
+    margin: auto;
+}
+
 /* フッターロゴ */
 .footer_logo {
-    margin-top: 90px;
+    margin-top: 200px;
     margin-bottom: 100px;
     text-align: center;
 }
@@ -746,17 +768,17 @@ nav1 .ABOUTa,
 
 
 /* スマホ対応↓ */
-@media screen and (max-width:374px) {
+@media screen and (max-width:767px) {
 
-    /* html {
-        scroll-behavior: smooth;
-        スムーズにスクロールさせるコード 
-}*/
+    /* firstview */
     .sunrise img {
-        width: 100%;
+        max-width: 100vw;
+        margin: auto;
+        display: block;
     }
 
-    .header_wrap {
+    /* ハンバーガーメニュー */
+    .menubar {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -770,9 +792,20 @@ nav1 .ABOUTa,
         z-index: 100;
     }
 
-    .header_logo {
-        width: 226.76px;
+    .pc_logo {
+        display: none;
     }
+
+    .sp_logo {
+        text-align: left;
+        padding-left: 30%;
+        margin-top: 3%;
+        display: block;
+    }
+
+    /* .header_logo {
+        width: 226.76px;
+    } */
 
     .pc_nav ul {
         display: flex;
@@ -793,4 +826,130 @@ nav1 .ABOUTa,
     .pc_nav ul li:last-child {
         margin-right: 0;
     }
+
+    /* ハンバーガーメニュー */
+    .pc_nav {
+        display: none;
+    }
+
+    /* 三本ライン */
+    .btn {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        /* ここを後でイラレから調べて入れなおす */
+        top: 40px;
+        right: -60px;
+        height: 30px;
+        z-index: 100;
+    }
+
+    .btn span {
+        background: #fff;
+        width: 33px;
+        height: 3px;
+        display: block;
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    .btn span::before,
+    .btn span::after {
+        content: '';
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        display: block;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .btn span::before {
+        bottom: 10px;
+    }
+
+    .btn span::after {
+        top: 10px;
+    }
+
+    .open span {
+        background: transparent;
+    }
+
+    .open span::before {
+        bottom: 0px;
+        transform: rotate(45deg);
+    }
+
+    .open span::after {
+        top: 0px;
+        transform: rotate(135deg);
+    }
+
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .sp_nav ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .sp_nav li {
+        text-align: center;
+        color: #fff;
+        font-size: 17px;
+        padding: 10px 0;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    }
+
+    .daimei {
+        display: none;
+    }
+
+    /* コンセプト文字 */
+    .consept {
+        text-align: left;
+        color: #ffffff;
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 2.25em;
+        letter-spacing: 0.05em;
+        margin-top: 30px;
+        display: flex;
+    }
+
+    .scroll {
+        display: none;
+    }
+
+    .line {
+        display: none;
+    }
+
+    .second {
+        text-align: center;
+        width: 100%;
+    }
+
+    .ABOUT {
+        color: #000000;
+        font-family: 游明朝;
+        font-weight: normal;
+        font-size: 35px;
+        letter-spacing: 0.1em;
+        margin-top: 30px;
+        display: flex;
+        display: block;
+    }
+
 }
