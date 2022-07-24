@@ -1,2 +1,0 @@
-10:22:13:233 [WARN]	Request Failed. ErrorCode: 29 errorMessage: Timeout, Send Request Failed t=62088
-21:32:32:827 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 

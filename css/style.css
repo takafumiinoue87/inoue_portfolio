@@ -32,9 +32,9 @@ a {
     transition: 0.3s;
 }
 
-a:hover {
+/* a:hover {
     opacity: 0.5;
-}
+} */
 
 ul {
     /*左の「・」を消す*/
@@ -69,10 +69,10 @@ body {
 }
 
 /* ロゴ指定 */
-.pc_logo {
+.pc_logo img {
     text-align: left;
-    padding-left: 210px;
-    margin-top: 200px;
+    margin-left: 150px;
+    margin-top: 80px;
     display: block;
 }
 
@@ -82,6 +82,7 @@ body {
 
 .sp_nav {
     display: none;
+    z-index: 1000;
 }
 
 
@@ -90,6 +91,7 @@ body {
     margin-top: 80px;
     margin-bottom: 50px;
     justify-content: space-between;
+    z-index: 1000;
 }
 
 .pc_nav ul {
@@ -121,7 +123,7 @@ body {
 
 .first {
     display: flex;
-    text-align: center;
+    /* text-align: center; */
     padding-left: 160px;
 }
 
@@ -139,6 +141,16 @@ body {
     margin-top: 200px;
     padding-right: 50px;
     float: left;
+}
+
+.consept {
+    font-family: 游ゴシック;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 2.64em;
+    letter-spacing: 0.05em;
+    color: #000000;
+    padding-top: 30px;
 }
 
 /*コンセプト文章 */
@@ -237,7 +249,7 @@ body {
 
 /* first view写真設定 */
 .sunrise img {
-    width: 700px;
+    max-width: 700px;
     float: right;
     margin-top: 135px;
     padding-right: 30px;
@@ -263,7 +275,7 @@ body {
 
 /* グレーの四角枠 */
 .flame {
-    width: 500px;
+    max-width: 500px;
     height: 450px;
     background: #d3d3d3;
     margin-left: 685px;
@@ -331,6 +343,20 @@ body {
 
 /* 角丸ボタン */
 .black {
+    text-align: center;
+}
+
+/* アニメーションボタン */
+.black .prof {
+    background: #d3d3d3;
+    color: #000000;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
     font-family: 游明朝;
     width: 320px;
     height: 50px;
@@ -348,51 +374,13 @@ body {
     text-align: center;
 }
 
-/* アニメーションボタン */
-.black .prof {
-    background: #d3d3d3;
-    color: #000000;
-    border: none;
-    position: relative;
-    height: 60px;
-    font-size: 1.6em;
-    padding: 0 2em;
-    cursor: pointer;
-    transition: 800ms ease all;
-    outline: none;
-}
-
 .black .prof:hover {
     background: #000000;
     color: #c4b69a;
 }
 
-.black .prof:before,
-.black .prof:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: #d3d3d3;
-    transition: 400ms ease all;
-}
-
-.black .prof:after {
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
-}
-
-.black .prof:hover:before,
-.black .prof:hover:after {
-    width: 100%;
-    transition: 800ms ease all;
-}
-
 /* ↑ここまでアニメーションボタン */
+
 
 /* ここからsection third */
 .third {
@@ -444,28 +432,24 @@ body {
 
 /* SKILL画像のli */
 .skillmark {
-    width: 120px;
+    max-width: 120px;
     height: 120px;
-    /* margin-right: 40px; */
     text-align: center;
     margin: auto;
 }
 
+
 /* ここからsection fourth */
-/* .fourth {
-    max-width: 1000px;
-    text-align: center;
-    margin: auto;
-} */
 
 /* グレーの四角枠 */
 .big_flame {
-    width: 1366px;
+    width: 100%;
     height: 1250px;
     background-color: #adbabe;
-    text-align: center;
     margin: auto;
+    /*  text-align: center;*/
 }
+
 
 /* WORK */
 .work {
@@ -491,15 +475,19 @@ body {
     color: #ffffff;
 }
 
-/* WORK画像全体 ul */
-.pc_work {
+/* ul,liの外側 */
+.pc_job {
     max-width: 1000px;
+    padding-top: 140px;
     text-align: center;
+}
+
+/* ul */
+.pc_work {
     margin: auto;
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    padding: 140px 130px 0 180px;
+    text-align: center;
 }
 
 /* WORK画像全体 li */
@@ -509,15 +497,18 @@ body {
 .work4,
 .work5,
 .work6 {
-    max-width: 1000px;
     text-align: center;
     margin: auto;
-    width: 300px;
-    height: 320px;
+    max-width: 300px;
+    max-height: 320px;
     padding-right: 30px;
     padding-bottom: 50px;
-    justify-content: space-between;
 }
+
+/* 最終右側のみ余白削除 */
+/* .pc_job ul li:last-child {
+    padding-right: 0;
+} */
 
 /* VIEW MOREボタン */
 /* 文字が１行の時はline-heightとheightの値を同じにすれば垂直方向に均等になる */
@@ -545,7 +536,7 @@ body {
 
 /* アニメーションボタン */
 
-a {
+.more {
     background: #6b82a8;
     color: #ffffff;
     border: none;
@@ -556,35 +547,11 @@ a {
 }
 
 /* カーソルが当たった後のボタンと文字の変更色 */
-a:hover {
+.more:hover {
     background: #000000;
     color: #c4b69a;
 }
 
-a:before,
-a:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 2px;
-    width: 0;
-    background: #a3b0b4;
-    transition: 400ms ease all;
-}
-
-a:after {
-    right: inherit;
-    top: inherit;
-    left: 0;
-    bottom: 0;
-}
-
-a:hover:before,
-a:hover:after {
-    width: 100%;
-    transition: 800ms ease all;
-}
 
 /* ↑ここまでアニメーションボタン */
 
@@ -650,7 +617,7 @@ dt span {
 
 /* 氏名の枠の中 */
 form .default {
-    width: 1000px;
+    width: 100%;
     height: 50px;
     border: none;
     font-size: 25px;
@@ -658,7 +625,7 @@ form .default {
 
 /* フリガナの枠の中 */
 form .solid {
-    width: 1000px;
+    width: 100%;
     height: 50px;
     border: none;
     font-size: 25px;
@@ -666,7 +633,7 @@ form .solid {
 
 /* 企業名の枠の中 */
 form .dotted {
-    width: 1000px;
+    width: 100%;
     height: 50px;
     border: none;
     font-size: 25px;
@@ -674,7 +641,7 @@ form .dotted {
 
 /* メールアドレスの枠の中 */
 form .dotted-bold {
-    width: 1000px;
+    width: 100%;
     height: 50px;
     border: none;
     font-size: 25px;
@@ -682,7 +649,7 @@ form .dotted-bold {
 
 /* お問い合わせの枠の中 */
 form .bg-color {
-    width: 1000px;
+    width: 100%;
     height: 350px;
     border: none;
     font-size: 25px;
@@ -728,33 +695,6 @@ form .bg-color {
 }
 
 /* フッターのメニュー */
-/* nav1 {
-    text-align: left;
-    margin-left: 75px;
-    margin-bottom: 60px;
-    justify-content: space-between;
-}
-
-nav1 ul {
-    margin: 0;
-    padding: 0;
-    font-family: 游明朝;
-    font-size: 15px;
-}
-
-nav1 .ABOUTa,
-.SKILLa,
-.WORKa,
-.CONTACTa {
-    margin-right: 100px;
-    list-style: none;
-    display: inline-block;
-    color: #000000;
-    /* text-decoration: underline; */
-/* width: 10%; */
-/* ここで項目の幅を指定します */
-/*  */
-
 
 /* Ⓒ文章 */
 .pc_last {
@@ -766,55 +706,113 @@ nav1 .ABOUTa,
     margin: auto;
 }
 
+.sp_menubar {
+    display: none;
+}
 
+.sp_first {
+    display: none;
+}
 
-/* スマホ対応↓ */
+.sp_second {
+    display: none;
+}
+
+.sp_third {
+    display: none;
+}
+
+.sp_fourth {
+    display: none;
+}
+
+.sp_fifth {
+    display: none;
+}
+
+.sp_footer {
+    display: none;
+}
+
+/* ************************************************************************************************************************************************************* */
+/* スマホ対応↓ 767pxだがillustratorは375pxで作成375で数値等考えていい*/
 @media screen and (max-width:767px) {
 
-    /* firstview */
-    .sunrise img {
-        height: 100vw;
+    /* pc版をレスポンシブ対応で全て消す */
+    .menubar {
+        display: none;
+    }
+
+    .first {
+        display: none;
+    }
+
+    .second {
+        display: none;
+    }
+
+    .third {
+        display: none;
+    }
+
+    .fourth {
+        display: none;
+    }
+
+    .fifth {
+        display: none;
+    }
+
+    .footer {
+        display: none;
+    }
+
+    .footer_logo {
+        display: none;
+    }
+
+    /* sp版ここから */
+
+    .sp_background {
+        background: #dddddd;
         width: 100%;
-        margin: auto;
+    }
+
+    /* header部分 */
+    .sp_menubar {
         display: block;
     }
 
+    .sp_logo {
+        display: block;
+        z-index: 200;
+        position: absolute;
+        top: 7%;
+        left: 5%;
+    }
+
     /* ハンバーガーメニュー */
-    .menubar {
+    /* .menubar {
         display: flex;
         justify-content: space-between;
         align-items: center;
         padding: 10px 6.53% 0 2.51%;
         position: absolute;
         /* サイト全体からの位置取り */
-        top: 0;
+    /*  top: 0;
         left: 0;
         width: 100%;
         box-sizing: border-box;
         z-index: 100;
-    }
-
-    .pc_logo {
-        display: none;
-    }
-
-    .sp_logo {
-        text-align: left;
-        padding-left: 30%;
-        margin-top: 3%;
-        display: block;
-    }
-
-    /* .header_logo {
-        width: 226.76px;
     } */
+    /*   */
 
-    .pc_nav ul {
+    .sp_nav ul {
         display: flex;
-
+        text-align: center;
     }
 
-    .pc_nav li {
+    .sp_nav li {
         width: 104px;
         margin-right: 55px;
         font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
@@ -822,30 +820,29 @@ nav1 .ABOUTa,
         font-size: 18px;
         font-weight: bold;
         color: #fff;
-
     }
 
-    .pc_nav ul li:last-child {
+    /* 最終右側のみ余白削除 */
+    .sp_nav ul li:last-child {
         margin-right: 0;
     }
 
     /* ハンバーガーメニュー */
-    .pc_nav {
+    /* .sp_nav {
         display: none;
-    }
+    } */
 
     /* 三本ライン */
     .btn {
         display: block;
         cursor: pointer;
         position: absolute;
-        /* ここを後でイラレから調べて入れなおす */
-        top: 40px;
-        right: -60px;
-        height: 30px;
+        top: 5%;
+        right: 6%;
         z-index: 100;
     }
 
+    /* 三本ラインの真中の線 */
     .btn span {
         background: #fff;
         width: 33px;
@@ -856,6 +853,7 @@ nav1 .ABOUTa,
         transition: 0.3s;
     }
 
+    /* 三本ライン上下線 */
     .btn span::before,
     .btn span::after {
         content: '';
@@ -879,6 +877,7 @@ nav1 .ABOUTa,
         background: transparent;
     }
 
+    /* 回転して×になる */
     .open span::before {
         bottom: 0px;
         transform: rotate(45deg);
@@ -905,6 +904,7 @@ nav1 .ABOUTa,
         flex-direction: column;
     }
 
+    /* 三本ライン開いた後のメニュー */
     .sp_nav li {
         text-align: center;
         color: #fff;
@@ -913,105 +913,502 @@ nav1 .ABOUTa,
         font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     }
 
+
+    /* firstview文章 */
+    .sp_first {
+        display: block;
+    }
+
+    /* 朝日～文章 */
+    .sp_consept {
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 2.25em;
+        letter-spacing: 0.05em;
+        color: #ffffff;
+        position: absolute;
+        top: 35%;
+        left: 5%
+    }
+
+    /* firstview写真 */
+    .sp_consept img {
+        width: 100%;
+        padding-bottom: 40px
+    }
+
+
     /* Rise at...を消す */
     .daimei {
         display: none;
     }
 
-    /* コンセプト文字 */
-    .consept {
-        text-align: left;
-        color: #ffffff;
-        font-family: 游ゴシック;
-        font-weight: normal;
-        font-size: 32px;
-        line-height: 2.28em;
-        letter-spacing: 0.05em;
-        margin-top: 30px;
-        margin-left: 100px;
-        display: flex;
-        z-index: 100;
-    }
-
-    .scroll {
-        display: none;
-    }
-
-    .line {
-        display: none;
+    .sp_second {
+        display: block;
     }
 
     /* ABOUT欄 */
-    .ABOUT {
+    .sp_ABOUT {
         font-family: 游明朝;
         font-size: 35px;
         letter-spacing: 0.1em;
         text-align: center;
         color: #000000;
+        display: block;
+        padding-top: 40px;
     }
 
     /* 私について */
-    .about {
+    .sp_about {
         font-family: 游ゴシック;
-        font-size: 16px;
+        font-weight: normal;
+        font-size: 15px;
         letter-spacing: 0.05em;
-        text-align: left;
-        position: absolute;
-        left: 12%;
-        top: 22%;
+        text-align: center;
         color: #000000;
+        display: block;
+        padding-top: 15px;
     }
 
     /* 自分の写真 */
-    .photo img {
-        width: 400px;
-        height: 400px;
-        margin-top: 70px;
-        margin-left: 290px;
-    }
-
-    /*  .photo {
-        width: 200px; */
-    /* 切り抜きたい大きさを指定 */
-    /*  height: 200px; */
-    /* 切り抜きたい大きさを指定 */
-    /*  border-radius: 50%; */
-    /* 形を円形にする */
-    /*  overflow: hidden; */
-    /* はみ出した部分は非表示 */
-    /*   position: relative; */
-    /* 基準値とする */
-    /*  }
-
-    .photo img {
-        width: inherit; */
-    /* 親要素に合わせる（自由に調整可） */
-    /*  height: inherit; */
-    /* 親要素に合わせる（自由に調整可） */
-    /*  position: absolute; */
-    /* 相対位置に指定 */
-    /*   top: 0; */
-    /* 好きな位置を指定 */
-    /*     left: 0; */
-    /* 好きな位置を指定 */
-    /*    } */
-
-
-
-    /* グレーの四角枠 */
-    .flame {
-        width: 500px;
-        height: 450px;
-        background: #d3d3d3;
-        margin-left: 685px;
-        margin-top: -430px;
-        position: relative;
+    .sp_photo img {
+        padding-top: 20px;
+        /* text-align: center; */
+        display: block;
+        /* align-items: center;
+        display: flex; */
+        position: absolute;
+        left: 50%;
     }
 
     /* Instagramアイコン */
-    .icon img {
-        padding-left: 390px;
+    .sp_icon img {
+        display: block;
+        display: flex;
+    }
+
+    /* 井上貴史 */
+    .sp_name {
+        font-family: 游明朝;
+        font-size: 36px;
+        letter-spacing: 0.1em;
+        color: #000000;
+        text-align: center;
         padding-top: 30px;
     }
 
+    /* inoue takafumi */
+    .sp_name_two {
+        font-family: 游明朝;
+        font-size: 15px;
+        letter-spacing: 0.1em;
+        color: #000000;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    /* 趣味～説明文章 */
+    .sp_setumei {
+        font-family: 游ゴシック;
+        font-weight: normal;
+        max-width: 320px;
+        font-size: 15px;
+        line-height: 2em;
+        text-align: left;
+        color: #000000;
+        display: block;
+        align-items: center;
+    }
+
+    /* 角丸ボタン */
+    .sp_black {
+        text-align: center;
+    }
+
+    /* アニメーションボタン */
+    .sp_black .sp_prof {
+        background: #d3d3d3;
+        color: #000000;
+        border: none;
+        position: relative;
+        height: 60px;
+        font-size: 1.6em;
+        cursor: pointer;
+        transition: 800ms ease all;
+        outline: none;
+        font-family: 游明朝;
+        width: 250px;
+        height: 40px;
+        /* ボタンの中の文字を中央に合わせるためline-heightをheightと数値を合わせて書き込んでいる */
+        line-height: 40px;
+        font-size: 17px;
+        letter-spacing: 0.15;
+        display: block;
+        background: #c4b69a;
+        border-radius: 20px;
+        border: none;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .sp_black .sp_prof:hover {
+        background: #000000;
+        color: #c4b69a;
+    }
+
+    /* ↑ここまでアニメーションボタン */
+
+    /* ボタン下のライン */
+    .sp_border {
+        border-bottom: #8d8d8d solid 1px;
+        width: 100%;
+    }
+
+
+    /* SKILL */
+    .sp_third {
+        display: block;
+    }
+
+    /* SKILL */
+    .sp_skill {
+        margin-top: 40px;
+        font-family: 游明朝;
+        font-size: 35px;
+        letter-spacing: 0.1em;
+        color: #000000;
+        text-align: center;
+    }
+
+    /* できること */
+    .sp_can {
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+
+    /* ul,liの外側 */
+    .sp_mark {
+        display: block;
+        padding-right: 40px;
+
+    }
+
+    /* SKILL ul */
+    .sp_skillmark {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        /* align-items: center; */
+        text-align: center;
+    }
+
+    /* SKILL li */
+    .sp_skill_ill,
+    .sp_skill_pho,
+    .sp_skill_html,
+    .sp_skill_css,
+    .sp_skill_js_jq {
+        padding-bottom: 40px;
+        /* padding-right: 40px; */
+    }
+
+    /* 最終右側のみ余白削除 */
+    .sp_mark ul li:last-child {
+        padding-right: 0;
+
+    }
+
+    /* SKILL文章 */
+    .sp_omoi {
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 2em;
+        padding-bottom: 40px;
+        display: block;
+        text-align: left;
+        margin: auto;
+        max-width: 320px;
+    }
+
+    /* WORK */
+    .sp_fourth {
+        display: block;
+
+    }
+
+    /* WORKの青色背景色 */
+    .sp_big_flame {
+        background: #a6b6bd;
+        width: 100%;
+        /* height: 730px; */
+    }
+
+    /* work */
+    .sp_work {
+        padding-top: 60px;
+        font-family: 游明朝;
+        font-size: 35px;
+        letter-spacing: 0.1em;
+        color: #ffffff;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+    /* 制作物 */
+    .sp_seisaku {
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+        padding-bottom: 50px;
+        color: #ffffff;
+        text-align: center;
+    }
+
+
+    .sp_job {
+        display: block;
+    }
+
+    .sp_job_logo,
+    .sp_job_com,
+    .sp_job_cos,
+    .sp_job_des {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        margin: auto;
+        padding-right: 40px;
+        padding-bottom: 25px;
+        /* width: 140px;
+        height: 160px; */
+    }
+
+
+    .sp_mark ul li:last-child {
+        padding-right: 0;
+    }
+
+    /*            :::::::::::::::::::::::::::::::::::::::::::::          ここから       :::::::::::::::::::::::::::::::::::::::::::::::::::::::                   */
+
+
+    /* VIEW MOREボタン */
+    /* 文字が１行の時はline-heightとheightの値を同じにすれば垂直方向に均等になる */
+    .sp_more {
+        text-align: center;
+        margin: auto;
+        font-family: 游明朝;
+        width: 250px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 15px;
+        letter-spacing: 0.1;
+        display: block;
+        background: #6b82a8;
+        color: #ffffff;
+        border-radius: 20px;
+        cursor: pointer;
+        /* margin-bottom: 130px; */
+        border: none;
+        margin-top: 85px;
+    }
+
+    /* アニメーションボタン */
+
+    .sp_more {
+        background: #6b82a8;
+        color: #ffffff;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        transition: 800ms ease all;
+        outline: none;
+    }
+
+    /* カーソルが当たった後のボタンと文字の変更色 */
+    .sp_more:hover {
+        background: #000000;
+        color: #c4b69a;
+    }
+
+    /* ↑ここまでアニメーションボタン */
+    .vmb {
+        padding-bottom: 90px;
+    }
+
+
+    /* ここからsection fifth */
+    .sp_fifth {
+        display: block;
+    }
+
+    /* CONTACT欄全体 */
+    .sp_mail {
+        text-align: center;
+        width: 100%;
+        margin: auto;
+    }
+
+    /* CONTACT */
+    .sp_toi {
+        display: block;
+        font-family: 游明朝;
+        font-size: 35px;
+        letter-spacing: 0.1em;
+        color: #717ae4;
+        text-align: center;
+        padding-top: 20px;
+    }
+
+    /* ロゴ／～受ける仕事内容 */
+    .sp_sigoto {
+        font-family: 游ゴシック;
+        font-size: 15px;
+        font-weight: normal;
+        line-height: 1.66em;
+        letter-spacing: 0.1em;
+        color: #717ae4;
+        padding-top: 30px;
+    }
+
+    /* ご相談～お願い文 */
+    .sp_irai {
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+        color: #717ae4;
+        padding-top: 30px;
+    }
+
+    /* 必須～注意文 */
+    .sp_mandatory {
+        font-family: 游ゴシック;
+        font-size: 15px;
+        letter-spacing: 0.05em;
+        color: #ff0000;
+        padding-top: 20px;
+        padding-bottom: 40px;
+        font-weight: bold;
+    }
+
+    /* 氏名、企業名等題名 */
+    dt {
+        margin: 40px 0 20px 0;
+        text-align: left;
+        color: #000000;
+    }
+
+    /* ※必須文字 */
+    dt span {
+        color: red;
+        font-weight: bold;
+    }
+
+    /* 氏名の枠の中 */
+    form .sp_default {
+        width: 100%;
+        height: 40px;
+        border: none;
+        font-size: 17px;
+        padding: 0 20px;
+    }
+
+    /* フリガナの枠の中 */
+    form .sp_solid {
+        width: 100%;
+        height: 40px;
+        border: none;
+        font-size: 17px;
+        padding: 0 20px;
+    }
+
+    /* 企業名の枠の中 */
+    form .sp_dotted {
+        width: 100%;
+        height: 40px;
+        border: none;
+        font-size: 17px;
+        padding: 0 20px;
+    }
+
+    /* メールアドレスの枠の中 */
+    form .sp_dotted-bold {
+        width: 100%;
+        height: 40px;
+        border: none;
+        font-size: 17px;
+        padding: 0 20px;
+    }
+
+    /* お問い合わせの枠の中 */
+    form .sp_bg-color {
+        width: 100%;
+        height: 350px;
+        border: none;
+        font-size: 17px;
+        margin-bottom: 90px;
+    }
+
+    /* 送信ボタン */
+    .sp_submit-btn input {
+        font-family: 游ゴシック;
+        max-width: 250px;
+        min-width: 180px;
+        max-height: 40px;
+        font-size: 15px;
+        display: block;
+        color: #ffffff;
+        background: #6b809e;
+        border-radius: 20px;
+        cursor: pointer;
+        border: none;
+        margin: auto;
+        /* 影の設定 */
+        box-shadow: 6px 6px 3px #666666;
+        margin-bottom: 70px;
+    }
+
+    /* 送信ボタンにカーソルが当たるとボタンが下がる動き */
+    .sp_submit-btn input:hover {
+        box-shadow: none;
+        transform: translate(0, 5px);
+    }
+
+    /* フッター */
+    .sp_footer {
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin: auto;
+        padding-bottom: 50px;
+    }
+
+    /* フッターロゴ */
+    .sp_footer_logo {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    /* フッターのメニュー */
+
+    /* Ⓒ文章 */
+    .sp_last {
+        font-family: 游明朝;
+        font-weight: normal;
+        font-size: 14px;
+        text-align: center;
+        letter-spacing: 0.1em;
+        padding-bottom: 10px;
+        color: #000000;
+
+    }
 }
