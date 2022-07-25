@@ -796,7 +796,7 @@ form .bg-color {
         z-index: 200;
         position: absolute;
         top: 7%;
-        left: 5%;
+        left: 7%;
     }
 
     /* ハンバーガーメニュー */
@@ -846,8 +846,8 @@ form .bg-color {
         cursor: pointer;
         position: absolute;
         top: 5%;
-        right: 6%;
-        z-index: 1100;
+        right: 10%;
+        z-index: 1000;
     }
 
     /* 三本ラインの真中の線 */
@@ -937,7 +937,7 @@ form .bg-color {
         color: #ffffff;
         position: absolute;
         top: 35%;
-        left: 5%
+        left: 7%
     }
 
     /* firstview写真 */
@@ -1150,15 +1150,17 @@ form .bg-color {
 .sp_skill_html,
 .sp_skill_css,
 .sp_skill_js_jq {
-    padding-bottom: 40px;
+    /*  */
     text-align: center;
+    margin: auto;
+    padding-bottom: 40px;
 }
 
 /* 最終右側のみ余白削除 */
-.sp_mark ul li:last-child {
+/* .sp_mark ul li:last-child {
     padding-right: 0;
 
-}
+} */
 
 .maru {
     text-align: center;
@@ -1171,10 +1173,10 @@ form .bg-color {
     font-family: 游ゴシック;
     font-weight: normal;
     font-size: 15px;
-    line-height: 2em;
+    line-height: 1em;
     padding-bottom: 40px;
     display: block;
-    max-width: 320px;
+    max-width: 300px;
     display: inline-block;
     text-align: left;
 }
@@ -1232,9 +1234,9 @@ form .bg-color {
     justify-content: space-between;
 }
 
-/* .sp_job :last-child {
-        padding-right: 0;
-    } */
+.sp_job :last-child {
+    padding-right: 0;
+}
 
 
 
@@ -1293,6 +1295,7 @@ form .bg-color {
     text-align: center;
     width: 100%;
     margin: auto;
+    display: block;
 }
 
 /* CONTACT */
@@ -1308,8 +1311,8 @@ form .bg-color {
 
 /* ロゴ／～受ける仕事内容文章 */
 .sp_sigoto {
-    width: 320px;
-    max-width: 100%;
+    max-width: 320px;
+    width: 100%;
     font-family: 游ゴシック;
     font-size: 15px;
     font-weight: normal;
@@ -1317,6 +1320,8 @@ form .bg-color {
     letter-spacing: 0.1em;
     color: #717ae4;
     padding-top: 30px;
+    text-align: center;
+    margin: auto;
 }
 
 /* ご相談～お願い文 */
