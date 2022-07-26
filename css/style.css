@@ -58,20 +58,30 @@ body {
     background: #e7e7e7;
 }
 
-.menubar {
+.header_wrap {
     max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.menubar {
+    /*  max-width: 1000px;
     display: flex;
     margin: auto;
-    margin-bottom: 70px;
+    margin-bottom: 70px; */
     /* MENUbar追跡 ↓２つ*/
     position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
 }
 
 /* ロゴ指定 */
 .pc_logo img {
     text-align: left;
-    margin-left: 150px;
+    /* margin-left: 150px; */
     margin-top: 80px;
     display: block;
 }
@@ -100,7 +110,7 @@ body {
     font-family: 游明朝;
     font-size: 15px;
     display: flex;
-    margin-left: 450px;
+    /* margin-left: 450px; */
 }
 
 .pc_nav ul li {
@@ -122,14 +132,17 @@ body {
 }
 
 .first {
-    display: flex;
+    max-width: 1148px;
+    margin: 0 auto;
     /* text-align: center; */
-    padding-left: 160px;
+    /* padding-left: 160px; */
 }
 
 .firstview {
     display: flex;
     flex-flow: column;
+    width: 35.18%;
+    padding-left: 5.66%
 }
 
 /* Rise at... */
@@ -141,9 +154,12 @@ body {
     margin-top: 200px;
     padding-right: 50px;
     float: left;
+    z-index: 2300;
 }
 
+/*コンセプト文章 */
 .consept {
+    max-width: 210px;
     font-family: 游ゴシック;
     font-weight: normal;
     font-size: 17px;
@@ -151,10 +167,11 @@ body {
     letter-spacing: 0.05em;
     color: #000000;
     padding-top: 30px;
+    z-index: 2300;
 }
 
-/*コンセプト文章 */
-.pc_consept {
+
+/* .pc_consept {
     text-align: left;
     color: black;
     font-family: 游ゴシック;
@@ -163,7 +180,8 @@ body {
     line-height: 2.64em;
     letter-spacing: 0.05em;
     margin-top: 30px;
-}
+    z-index: 1300;
+} */
 
 .sp_concept {
     display: none;
@@ -247,30 +265,43 @@ body {
     }
 }
 
+.sunrise {
+    width: 59.66%
+}
+
 /* first view写真設定 */
 .sunrise img {
-    max-width: 700px;
-    float: right;
+    /* max-width: 700px; */
+    /* float: right; */
+    /* padding-right: 30px; */
     margin-top: 135px;
-    padding-right: 30px;
     margin-bottom: 75px;
+    width: 100%;
 }
 
 /* ここからsection seconde */
 /* 自分の写真と右のフレームを1000pxでとってその後に写真の左に100px入れる */
-.seconde {
+.second {
+    /* padding-left: 100px; */
+    /* text-align: center; */
     max-width: 1000px;
-    padding-left: 100px;
-    text-align: center;
-    margin: auto;
+    margin: 0 auto;
+    justify-content: space-between;
+    display: flex;
+}
+
+.photo {
+    width: 41%;
+    padding-left: 10%;
 }
 
 /* 自分の写真 */
 .photo img {
-    width: 285px;
-    height: 390px;
+    /* max-width: 285px;
+    height: 390px; */
     margin-top: 70px;
-    margin-left: 290px;
+    /* margin-left: 290px; */
+    width: 100%;
 }
 
 /* グレーの四角枠 */
@@ -283,9 +314,14 @@ body {
     position: relative;
 }
 
+.icon {
+    text-align: right;
+    padding-right: 20px;
+}
+
 /* Instagramアイコン */
 .icon img {
-    padding-left: 390px;
+    /* padding-left: 390px; */
     padding-top: 30px;
 }
 
@@ -295,9 +331,9 @@ body {
     font-size: 40px;
     letter-spacing: 0.1em;
     text-align: left;
-    position: absolute;
+    /* position: absolute;
     left: 9%;
-    top: 8%;
+    top: 8%; */
     color: #000000;
 }
 
@@ -742,6 +778,10 @@ form .bg-color {
     display: none;
 }
 
+.sp_third {
+    display: block;
+}
+
 /* ************************************************************************************************************************************************************* */
 /* スマホ対応↓ 767pxだがillustratorは375pxで作成375で数値等考えていい*/
 @media screen and (max-width:767px) {
@@ -776,6 +816,10 @@ form .bg-color {
     }
 
     .footer_logo {
+        display: none;
+    }
+
+    .sp_third {
         display: none;
     }
 

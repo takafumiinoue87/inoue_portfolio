@@ -1,0 +1,90 @@
+@charset "utf-8";
+
+/* リセット */
+html,
+body,
+header,
+footer,
+main,
+section,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dl,
+dt,
+dd {
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    color: #000000;
+    font-family: "A1 Mincho", "游明朝", YuMincho, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", "Sheila", sans-serif;
+    font-feature-settings: "palt";
+}
+
+a {
+    /*下線を消す*/
+    text-decoration: none;
+    /*色を消す*/
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* a:hover {
+    opacity: 0.5;
+} */
+
+ul {
+    /*左の「・」を消す*/
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: bottom;
+    border: none;
+}
+
+/* ここから */
+
+html {
+    scroll-behavior: smooth;
+    /* スムーズにスクロールさせるコード */
+}
+
+body {
+    background: #e7e7e7;
+}
+
+
+/* ************************************************************************* こ こ か ら ********************************************************************* */
+
+.sp_background {
+    display: none;
+}
+
+.sp_menubar {
+    display: none;
+}
+
+.sp_one {
+    display: none;
+}
+
+.sp_profile {
+    display: none;
+}
+
+.sp_pro {
+    display: none;
+}
+
+.sp_footer {
+    display: none;
+}
+
+.menubar {
+    display: block;
+}

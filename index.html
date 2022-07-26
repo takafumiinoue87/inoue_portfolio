@@ -11,6 +11,7 @@
     <title>portfolio</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="html/work_file">
 </head>
 
 
@@ -19,23 +20,30 @@
 <body>
     <!-- ヘッダー -->
     <header class="menubar">
-        <div class="pc_logo">
-            <img src="portfolio_file/material_file/riseat_logo_black.png" alt="Riseatのロゴ"><!-- メニューバーにロゴを表示する -->
+        <div class="header_wrap">
+            <div class="pc_logo">
+                <img src="portfolio_file/material_file/riseat_logo_black.png" alt="Riseatのロゴ"><!-- メニューバーにロゴを表示する -->
+            </div>
+            <nav class="pc_nav">
+                <ul>
+                    <li><a href="#ABOUT">ABOUT</a></li>
+                    <li><a href="#SKILL">SKILL</a></li>
+                    <li><a href="#WORK">WORK</a></li>
+                    <li><a href="#CONTACT">CONTACT</a></li>
+                </ul>
+            </nav>
         </div>
-        <nav class="pc_nav">
-            <ul>
-                <li><a href="#ABOUT">ABOUT</a></li>
-                <li><a href="#SKILL">SKILL</a></li>
-                <li><a href="#WORK">WORK</a></li>
-                <li><a href="#CONTACT">CONTACT</a></li>
-            </ul>
-        </nav>
     </header>
 
     <!-- pc_firstview欄 -->
     <section class="first">
         <div class="firstview">
-            <h1 class="daimei">Rise at...</h1>
+
+            <div class="daimei">
+                <img src="portfolio_file/material_file/Rise_at.png" alt="製作者の想いであるRise at...の画像">
+            </div>
+
+            <!-- <h1 class="daimei">Rise at...</h1> -->
             <p class="consept">朝日のように<br>心が明るくなるような<br>デザインを作りたい<br>そんなデザインを<br>一緒に作らせてください。</p>
             <p class="scroll">SCROLL</p>
             <p class="line"></p>
@@ -63,7 +71,7 @@
             </div>
             <!-- PROFILE.htmlを作ったらURLを書き込む -->
             <div class="black">
-                <a class="prof" href="URL">PROFILE</a>
+                <a class="prof" href="profile.html">PROFILE</a>
             </div>
             <!-- <button class="kadomaru">PROFILE</button> -->
         </div>
@@ -112,7 +120,7 @@
                 </ul>
             </div>
             <!-- work.htmlを作ったらURLを書き込む -->
-            <p><a class="more" href="URL">VIEW MORE</a></p>
+            <p><a class="more" href="work.html">VIEW MORE</a></p>
             <!-- <button1 class="view">VIEW MORE</button1> -->
         </div>
     </section>
@@ -182,7 +190,10 @@
         <div class="pc_last">© 2022 Rise at</div>
     </footer>
 </body>
+
+
 <!-- **********************************************************ここからSP版********************************************************************* -->
+
 
 <body class="sp_background">
     <!-- スマホヘッダー -->
@@ -233,7 +244,7 @@
         </div>
         <!-- PROFILE.htmlを作ったらURLを書き込む -->
         <div class="sp_black">
-            <a class="sp_prof" href="URL">PROFILE</a>
+            <a class="sp_prof" href="profile.html">PROFILE</a>
         </div>
         <!-- <button class="kadomaru">PROFILE</button> -->
         <div class="sp_border"></div>
@@ -281,7 +292,7 @@
             </ul>
             <div class="sp_view"></div>
             <!-- work.htmlを作ったらURLを書き込む -->
-            <p><a class="sp_more" href="URL">VIEW MORE</a></p>
+            <p><a class="sp_more" href="work.html">VIEW MORE</a></p>
             <!-- <button1 class="view">VIEW MORE</button1> -->
         </div>
     </section>
