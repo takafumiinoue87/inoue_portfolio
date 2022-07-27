@@ -60,12 +60,59 @@ body {
 
 
 /* ************************************************************************* こ こ か ら ********************************************************************* */
-
 .sp_background {
     display: none;
 }
 
 .sp_menubar {
+    display: none;
+}
+
+.sp_logo {
+    display: none;
+}
+
+.btn {
+    display: none;
+}
+
+.sp_nav {
+    display: none;
+}
+
+.sp_one {
+    display: none;
+}
+
+.sp_two {
+    display: none;
+}
+
+.sp_mail {
+    display: none;
+}
+
+.sp_toi {
+    display: none;
+}
+
+.sp_sigoto {
+    display: none;
+}
+
+.sp_irai {
+    display: none;
+}
+
+.sp_submit-btn {
+    display: none;
+}
+
+.sp_footer_logo {
+    display: none;
+}
+
+.sp_last {
     display: none;
 }
 
@@ -85,6 +132,250 @@ body {
     display: none;
 }
 
+html {
+    scroll-behavior: smooth;
+    /* スムーズにスクロールさせるコード */
+}
+
+.background {
+    background: #dddddd;
+}
+
+
+.header_wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+
 .menubar {
-    display: block;
+    /* MENUbar追跡 ↓２つ*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+.sp_logo {
+    display: none;
+}
+
+.sp_nav {
+    display: none;
+    z-index: 1000;
+}
+
+
+.pc_nav {
+    text-align: right;
+    margin-top: 80px;
+    margin-bottom: 50px;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.pc_nav ul {
+    margin: 0;
+    padding: 0;
+    font-family: 游明朝;
+    font-size: 15px;
+    display: flex;
+    /* margin-left: 450px; */
+}
+
+.pc_nav ul li {
+    margin-right: 90px;
+    list-style: none;
+    display: inline-block;
+    /* ここで項目の幅を指定します */
+}
+
+/* 最終右側のみ余白削除 */
+.pc_nav ul li:last-child {
+    margin-right: 0;
+}
+
+.pc_nav ul li a {
+    text-decoration: none;
+    color: #333;
+}
+
+/* メニュー hover時に下線を出す */
+.pc_nav li:hover {
+    border-bottom: 2px solid #b0c0c7;
+    /* 下線の太さや色を指定 */
+}
+
+/* PROFILE文字 */
+.profile {
+    font-family: 游明朝;
+    font-size: 40px;
+    /* letter-spacing: 4em; */
+    text-align: center;
+    margin: 0 auto;
+    color: #000000;
+    padding-top: 200px;
+}
+
+/* プロフィール文字 */
+.pro {
+    font-family: 游ゴシック;
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #000000;
+    padding: 20px 0 90px 0;
+    text-align: center;
+    /* z-index: 2300; */
+}
+
+/* 中のグレー枠 */
+.gray {
+    width: 100%;
+    background: #c9c9c9;
+    padding: 100px 180px;
+    box-sizing: border-box;
+}
+
+/* プロフィールの大枠 */
+.syokai {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    /*  align-items: flex-start; */
+    /*左端に整列*/
+}
+
+/* oitatiの外枠 */
+.matome {
+    max-width: 1000px;
+    background: #a6b6bd;
+}
+
+/* 1987年～文章 */
+.oitach {
+    font-family: 游ゴシック;
+    font-weight: normal;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.75em;
+    letter-spacing: 0.05em;
+}
+
+/* キャンプの写真と文章の外枠 */
+.flame {
+    display: flex;
+    justify-content: space-between;
+    max-height: 570px;
+    box-sizing: border-box;
+    margin-top: 120px;
+
+}
+
+/* キャンプの写真のみの枠 */
+.small_flame {
+    /* text-align: left; */
+}
+
+/* 焚火とコーヒーの写真 */
+.fire {
+    max-width: 320px;
+}
+
+/* 製作者が夜ホットコーヒーを飲みメガネがくもっている写真 */
+.hot_coffee {
+    max-width: 320px;
+}
+
+/* キャンプの文章のみの外枠 */
+.matome_camp {
+    max-width: 550px;
+    background: #a6b6bd;
+
+}
+
+/* キャンプの文章 */
+.camp {
+    font-family: 游ゴシック;
+    font-weight: normal;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.75em;
+    letter-spacing: 0.05em;
+}
+
+/* ゴルフの文章と写真の外枠 */
+.golf_green {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ゴルフの文章の外枠 */
+.fore {
+    max-width: 550px;
+    background: #a6b6bd;
+}
+
+/* ゴルフの文章 */
+.golf {
+    font-family: 游ゴシック;
+    font-weight: normal;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.75em;
+    letter-spacing: 0.05em;
+}
+
+/* ゴルフの写真 */
+.golf_play {
+    max-width: 400px;
+}
+
+/* 野球観戦の文章と写真の外枠 */
+.npb {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 野球観戦の写真 */
+.baseball {
+    max-width: 400px;
+}
+
+/* 野球観戦の文章の外枠 */
+.npb_pro {
+    max-width: 550px;
+    background: #a6b6bd;
+}
+
+/* 野球観戦の文章 */
+.baseball_pro {
+    font-family: 游ゴシック;
+    font-weight: normal;
+    font-size: 20px;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.75em;
+    letter-spacing: 0.05em;
+}
+
+
+
+
+
+/* ********************************************************スマホ版********************************************************************* */
+
+/* スマホ対応↓ 767pxだがillustratorは375pxで作成375で数値等考えていい*/
+@media screen and (max-width:767px) {
+
+    .background {
+        display: none;
+    }
 }
