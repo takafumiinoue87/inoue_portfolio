@@ -366,6 +366,88 @@ html {
     letter-spacing: 0.05em;
 }
 
+/* CONTACTの外枠 */
+.two {
+    width: 100%;
+    padding: 50px;
+    margin: 0 auto;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* CONTACTの文字 */
+.toi {
+    font-family: 游明朝;
+    font-size: 40px;
+    letter-spacing: 0.1em;
+    color: #8a8062;
+}
+
+/* ロゴ～営業文章 */
+.sigoto {
+    font-family: 游ゴシック;
+    font-weight: normal;
+    font-size: 23px;
+    color: #8a8062;
+    letter-spacing: 0.1em;
+    padding-top: 70px;
+}
+
+/* ご相談～案内文章 */
+.irai {
+    font-family: 游ゴシック;
+    font-weight: normal;
+    font-size: 23px;
+    color: #8a8062;
+    letter-spacing: 0.1em;
+    padding: 40px 0 100px 0;
+}
+
+/* お問い合わせアニメーションボタン */
+.okuri .okr_btn {
+    /* background: #d3d3d3; */
+    /* color: #000000; */
+    /* border: none;
+    position: relative;
+    height: 60px; */
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    font-family: 游明朝;
+    max-width: 320px;
+    /* height: 50px; */
+    line-height: 50px;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    display: block;
+    background: #c4b69a;
+    border-radius: 20px;
+    cursor: pointer;
+    border: none;
+    /* text-align: center; */
+    margin: 40px auto 130px;
+}
+
+.okuri .okr_btn:hover {
+    background: #000000;
+    color: #c4b69a;
+}
+
+/* フッターロゴ */
+.footer_logo {
+    padding-bottom: 70px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+/* コピーライト */
+.last {
+    font-family: 游明朝;
+    font-size: 20px;
+    letter-spacing: 0.1em;
+    color: #000000;
+}
 
 
 
@@ -375,7 +457,270 @@ html {
 /* スマホ対応↓ 767pxだがillustratorは375pxで作成375で数値等考えていい*/
 @media screen and (max-width:767px) {
 
-    .background {
+    .sp_background {
+        display: block;
+    }
+
+    .sp_background {
+        display: block;
+    }
+
+    .sp_menubar {
+        display: block;
+    }
+
+    .sp_logo {
+        display: block;
+    }
+
+    .btn {
+        display: block;
+    }
+
+    .sp_nav {
+        display: block;
+    }
+
+    .sp_one {
+        display: block;
+    }
+
+    .sp_two {
+        display: block;
+    }
+
+    .sp_mail {
+        display: block;
+    }
+
+    .sp_toi {
+        display: block;
+    }
+
+    .sp_sigoto {
+        display: block;
+    }
+
+    .sp_irai {
+        display: block;
+    }
+
+    .sp_submit-btn {
+        display: block;
+    }
+
+    .sp_footer_logo {
+        display: block;
+    }
+
+    .sp_last {
+        display: block;
+    }
+
+    .sp_one {
+        display: block;
+    }
+
+    .sp_profile {
+        display: block;
+    }
+
+    .sp_pro {
+        display: block;
+    }
+
+    .sp_footer {
+        display: block;
+    }
+
+    .menubar {
         display: none;
     }
+
+    .one {
+        display: none;
+    }
+
+    .two {
+        display: none;
+    }
+
+    /* 全体背景色 */
+    .sp_background {
+        background: #dddddd;
+        width: 100%;
+    }
+
+    /* 全体にあてるコード */
+    /* .sp_menubar {
+        text-align: center;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+    }
+ */
+    .sp_logo {
+        max-width: 180px;
+    }
+
+    .sp_nav ul {
+        display: flex;
+        text-align: center;
+    }
+
+    .sp_nav li {
+        /* width: 104px;
+        margin-right: 55px; */
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+        text-align: center;
+        font-size: 18px;
+        font-weight: bold;
+        color: #fff;
+    }
+
+    /* 最終右側のみ余白削除 */
+    .sp_nav ul li:last-child {
+        margin-right: 0;
+    }
+
+    /* ハンバーガーメニュー */
+    /* .sp_nav {
+        display: none;
+    } */
+
+    /* 三本ライン */
+    .btn {
+        display: block;
+        cursor: pointer;
+        position: absolute;
+        top: 5%;
+        right: 10%;
+        z-index: 1000;
+    }
+
+    /* 三本ラインの真中の線 */
+    .btn span {
+        background: #fff;
+        width: 33px;
+        height: 3px;
+        display: block;
+        position: relative;
+        top: 10px;
+        transition: 0.3s;
+    }
+
+    /* 三本ライン上下線 */
+    .btn span::before,
+    .btn span::after {
+        content: '';
+        width: 33px;
+        height: 3px;
+        background: #fff;
+        display: block;
+        position: absolute;
+        transition: 0.3s;
+    }
+
+    .btn span::before {
+        bottom: 10px;
+    }
+
+    .btn span::after {
+        top: 10px;
+    }
+
+    .open span {
+        background: transparent;
+    }
+
+    /* 回転して×になる */
+    .open span::before {
+        bottom: 0px;
+        transform: rotate(45deg);
+    }
+
+    .open span::after {
+        top: 0px;
+        transform: rotate(135deg);
+    }
+
+    .sp_nav {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.7);
+    }
+
+    .sp_nav ul {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    /* 三本ライン開いた後のメニュー */
+    .sp_nav li {
+        text-align: center;
+        color: #fff;
+        font-size: 17px;
+        padding: 10px 0;
+        font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
+    }
+
+    .sp_one {
+        text-align: center;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0;
+    }
+
+    .sp_profile {
+        font-family: 游明朝;
+        font-size: 35px;
+        letter-spacing: 0.1em;
+        color: #000000;
+        padding-top: 70px;
+    }
+
+    .sp_pro {
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        color: #000000;
+        letter-spacing: 0.05em;
+        padding-top: 10px;
+    }
+
+    .sp_gray {
+        background: c9c9c9;
+        width: 100%;
+    }
+
+
+    .sp_oitach {
+        text-align: left;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .sp_two {}
+
 }
