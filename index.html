@@ -132,32 +132,38 @@
             <p class="irai">ご相談、ご依頼等お気軽にご連絡ください!</p>
             <p class="mandatory">（※必須）は必ずご入力下さい。</p>
             <!-- お問い合わせフォーム メール欄 -->
-            <form action="https://api.staticforms.xyz/submit" method="post"></form>>
-            <dl>
-                <dt>氏 名<span>（※必須）</span></dt>
-                <dd>
-                    <input class="default" name="name" placeholder="" />
-                </dd>
-                <dt>フリガナ<span>（※必須）</span></dt>
-                <dd>
-                    <input class="solid" name="$name" placeholder="" />
-                </dd>
-                <dt>企業名</dt>
-                <dd>
-                    <input class="dotted" name="$company" placeholder="" />
-                </dd>
-                <dt>メールアドレス<span>（※必須）</span></dt>
-                <dd>
-                    <input class="dotted-bold" name="email" placeholder="" />
-                </dd>
-                <dt>お問い合わせ内容<span>（※必須）</span></dt>
-                <dd>
-                    <input class="bg-color" name="$company" placeholder="" />
-                </dd>
-                <div class="submit-btn">
-                    <input type="submit" value="送           信" />
-                </div>
-            </dl>
+            <form action="https://api.staticforms.xyz/submit" method="post">
+                <!-- <input type="text" required> 必須を記入しないと送れない一文-->
+                <dl>
+                    <dt>氏 名<span>（※必須）</span></dt>
+                    <dd>
+                        <input class="default" required name="name" placeholder="" />
+                    </dd>
+                    <dt>フリガナ<span>（※必須）</span></dt>
+                    <dd>
+                        <input class="solid" required name="$name" placeholder="" />
+                    </dd>
+                    <dt>企業名</dt>
+                    <dd>
+                        <input class="dotted" name="$company" placeholder="" />
+                    </dd>
+                    <dt>メールアドレス<span>（※必須）</span></dt>
+                    <dd>
+                        <input class="dotted-bold" required name="email" placeholder="" />
+                    </dd>
+                    <dt>お問い合わせ内容<span>（※必須）</span></dt>
+                    <dd>
+                        <input class="bg-color" required name="$company" placeholder="" />
+                    </dd>
+                    <div class="submit-btn">
+                        <input type="hidden" name="accessKey" value="a04165e9-d15d-4472-abfb-eefcc5789cea">
+                        <input type="hidden" name="subject" value="Contact us from - example.com" />
+                        <input type="hidden" name="replyTo" value="@">
+                        <input type="hidden" name="redirectTo" value="https://example.com/contact/success">
+                        <div class="sp_submit-btn">
+                            <input type="submit" value="送           信" />
+                        </div>
+                </dl>
             </form>
         </div>
     </section>
@@ -284,11 +290,11 @@
                 <dl>
                     <dt>氏 名<span>（※必須）</span></dt>
                     <dd>
-                        <input class="sp_default" name="name" placeholder="" />
+                        <input class="sp_default" required name="name" placeholder="" />
                     </dd>
                     <dt>フリガナ<span>（※必須）</span></dt>
                     <dd>
-                        <input class="sp_solid" name="$name" placeholder="" />
+                        <input class="sp_solid" required name="$name" placeholder="" />
                     </dd>
                     <dt>企業名</dt>
                     <dd>
@@ -296,11 +302,11 @@
                     </dd>
                     <dt>メールアドレス<span>（※必須）</span></dt>
                     <dd>
-                        <input class="sp_dotted-bold" name="email" placeholder="" />
+                        <input class="sp_dotted-bold" required name="email" placeholder="" />
                     </dd>
                     <dt>お問い合わせ内容<span>（※必須）</span></dt>
                     <dd>
-                        <input class="sp_bg-color" name="$company" placeholder="" />
+                        <input class="sp_bg-color" required name="$company" placeholder="" />
                     </dd>
                     <input type="hidden" name="accessKey" value="a04165e9-d15d-4472-abfb-eefcc5789cea">
                     <input type="hidden" name="subject" value="Contact us from - example.com" />
