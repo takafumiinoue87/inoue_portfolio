@@ -42,7 +42,7 @@ ul {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     vertical-align: bottom;
     border: none;
 }
@@ -477,7 +477,7 @@ body {
 /* デザインから～文章 */
 .omoi {
     font-family: 游ゴシック;
-    font-size: 15px;
+    font-size: 17px;
     /* letter-spacing: 0.1em; */
     line-height: 1.73em;
     color: #000000;
@@ -516,7 +516,7 @@ body {
 
 
 /* WORK */
-.work {
+.WORK {
     max-width: 1000px;
     text-align: center;
     margin: auto;
@@ -627,7 +627,7 @@ body {
 /* CONTACT欄全体 */
 .mail {
     text-align: center;
-    max-width: 1000px;
+    width: 85%;
     margin: auto;
 }
 
@@ -669,11 +669,17 @@ body {
     font-weight: bold;
 }
 
+form {
+    text-align: center;
+}
+
 /* 氏名、企業名等題名 */
 dt {
     margin: 40px 0 20px 0;
     text-align: left;
     color: #000000;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* ※必須文字 */
@@ -706,6 +712,7 @@ form .dotted {
     font-size: 25px;
 }
 
+
 /* メールアドレスの枠の中 */
 form .dotted-bold {
     width: 100%;
@@ -729,7 +736,7 @@ form .bg-color {
     width: 320px;
     height: 50px;
     font-size: 22px;
-    letter-spacing: 0.1;
+    letter-spacing: 0.1em;
     display: block;
     color: #000000;
     background: #c4b69a;
@@ -760,7 +767,7 @@ form .bg-color {
     padding-bottom: 100px;
     margin: auto;
     text-align: center;
-    max-width: 510px;
+    width: 45%;
 }
 
 /* フッターのメニュー */
@@ -858,6 +865,7 @@ form .bg-color {
     }
 
     .sp_logo {
+        width: 49%;
         display: block;
         z-index: 200;
         position: absolute;
@@ -911,7 +919,7 @@ form .bg-color {
         display: block;
         cursor: pointer;
         position: absolute;
-        top: 5%;
+        top: 8%;
         right: 10%;
         z-index: 1000;
     }
@@ -1052,6 +1060,7 @@ form .bg-color {
         text-align: center;
         display: block;
         margin: auto;
+        width: 50%;
         /* align-items: center;
         display: flex; */
         /* position: absolute; */
@@ -1118,9 +1127,7 @@ form .bg-color {
 
     /* 趣味～説明文章 */
     .sp_setumei {
-        /* max-width: 320px; */
-        width: 100%;
-        max-width: 320px;
+        width: 85%;
         color: #000000;
         display: block;
         text-align: center;
@@ -1156,7 +1163,7 @@ form .bg-color {
         transition: 800ms ease all;
         outline: none;
         font-family: 游明朝;
-        max-width: 250px;
+        width: 60%;
         height: 40px;
         /* ボタンの中の文字を中央に合わせるためline-heightをheightと数値を合わせて書き込んでいる */
         line-height: 40px;
@@ -1221,7 +1228,7 @@ form .bg-color {
 
     /* SKILL ul */
     .sp_skillmark {
-        width: 80%;
+        width: 85%;
         display: flex;
         flex-wrap: wrap;
         margin: 0 auto;
@@ -1256,10 +1263,10 @@ form .bg-color {
         font-family: 游ゴシック;
         font-weight: normal;
         font-size: 15px;
-        line-height: 1em;
+        line-height: 2em;
         padding-bottom: 40px;
         display: block;
-        max-width: 300px;
+        width: 85%;
         display: inline-block;
         text-align: left;
     }
@@ -1309,7 +1316,8 @@ form .bg-color {
     .sp_job_com,
     .sp_job_cos,
     .sp_job_des {
-        max-width: 140px;
+        width: 85%;
+        margin: 0 auto;
         display: flex;
         flex-wrap: wrap;
         margin: auto;
@@ -1329,7 +1337,7 @@ form .bg-color {
         text-align: center;
         margin: auto;
         font-family: 游明朝;
-        width: 250px;
+        width: 60%;
         height: 40px;
         line-height: 40px;
         font-size: 15px;
@@ -1341,7 +1349,7 @@ form .bg-color {
         cursor: pointer;
         /* margin-bottom: 130px; */
         border: none;
-        margin-top: 85px;
+        margin-top: 35px;
     }
 
     /* アニメーションボタン */
@@ -1376,9 +1384,10 @@ form .bg-color {
     /* CONTACT欄全体 */
     .sp_mail {
         text-align: center;
-        width: 100%;
+        width: 85%;
         margin: auto;
         display: block;
+        /*  padding: 5px; */
     }
 
     /* CONTACT */
@@ -1389,7 +1398,7 @@ form .bg-color {
         letter-spacing: 0.1em;
         color: #717ae4;
         text-align: center;
-        padding-top: 20px;
+        padding-top: 50px;
     }
 
     /* ロゴ／～受ける仕事内容文章 */
@@ -1420,7 +1429,7 @@ form .bg-color {
     /* 必須～注意文 */
     .sp_mandatory {
         font-family: 游ゴシック;
-        font-size: 15px;
+        font-size: 16px;
         letter-spacing: 0.05em;
         color: #ff0000;
         padding-top: 20px;
@@ -1437,6 +1446,8 @@ form .bg-color {
         margin: 40px 0 20px 0;
         text-align: left;
         color: #000000;
+        font-size: 16px;
+        font-weight: bold;
     }
 
     /* ※必須文字 */
@@ -1492,9 +1503,8 @@ form .bg-color {
     /* 送信ボタン */
     .sp_submit-btn input {
         font-family: 游ゴシック;
-        max-width: 250px;
-        min-width: 180px;
-        height: auto;
+        width: 60%;
+        height: 40px;
         font-size: 15px;
         display: block;
         color: #ffffff;

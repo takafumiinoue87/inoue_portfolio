@@ -236,7 +236,7 @@ html {
 .gray {
     width: 100%;
     background: #c9c9c9;
-    padding: 100px 180px;
+    padding: 100px 20px;
     box-sizing: border-box;
 }
 
@@ -246,64 +246,68 @@ html {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    /*  align-items: flex-start; */
-    /*左端に整列*/
+
 }
 
 /* oitatiの外枠 */
 .matome {
     max-width: 1000px;
     background: #a6b6bd;
+    box-sizing: border-box;
+    text-align: center;
 }
 
 /* 1987年～文章 */
 .oitach {
     font-family: 游ゴシック;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
-    text-align: center;
+    text-align: left;
     line-height: 1.75em;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.1em;
+    padding: 1.5% 2%;
 }
 
 /* キャンプの写真と文章の外枠 */
 .flame {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    max-height: 570px;
     box-sizing: border-box;
     margin-top: 120px;
-
 }
 
 /* キャンプの写真のみの枠 */
-.small_flame {
-    /* text-align: left; */
-}
+/* .small_flame {
+
+} */
 
 /* 焚火とコーヒーの写真 */
 .fire {
-    max-width: 320px;
+    width: 70%;
 }
 
 /* 製作者が夜ホットコーヒーを飲みメガネがくもっている写真 */
 .hot_coffee {
-    max-width: 320px;
+    width: 70%;
+    margin-left: 70px;
+    margin-top: -40px;
 }
 
-/* キャンプの文章のみの外枠 */
+/* キャンプの文章の外枠 */
 .matome_camp {
-    max-width: 550px;
+    width: 50%;
     background: #a6b6bd;
-
+    padding: 1.5% 2%;
+    box-sizing: border-box;
 }
 
 /* キャンプの文章 */
 .camp {
     font-family: 游ゴシック;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
     text-align: left;
     line-height: 1.75em;
@@ -314,52 +318,61 @@ html {
 .golf_green {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 /* ゴルフの文章の外枠 */
 .fore {
-    max-width: 550px;
+    width: 50%;
     background: #a6b6bd;
+    padding: 1.5% 2%;
+    box-sizing: border-box;
 }
 
 /* ゴルフの文章 */
 .golf {
     font-family: 游ゴシック;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
     text-align: left;
     line-height: 1.75em;
     letter-spacing: 0.05em;
+
 }
 
 /* ゴルフの写真 */
 .golf_play {
-    max-width: 400px;
+    width: 40%;
 }
 
 /* 野球観戦の文章と写真の外枠 */
 .npb {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
 }
 
 /* 野球観戦の写真 */
 .baseball {
-    max-width: 400px;
+    width: 40%;
 }
 
 /* 野球観戦の文章の外枠 */
 .npb_pro {
-    max-width: 550px;
+    width: 50%;
     background: #a6b6bd;
+    padding: 1.5% 2%;
+    box-sizing: border-box;
 }
 
 /* 野球観戦の文章 */
 .baseball_pro {
     font-family: 游ゴシック;
     font-weight: normal;
-    font-size: 20px;
+    font-size: 18px;
     color: #ffffff;
     text-align: left;
     line-height: 1.75em;
@@ -387,7 +400,7 @@ html {
 .sigoto {
     font-family: 游ゴシック;
     font-weight: normal;
-    font-size: 23px;
+    font-size: 20px;
     color: #8a8062;
     letter-spacing: 0.1em;
     padding-top: 70px;
@@ -397,7 +410,7 @@ html {
 .irai {
     font-family: 游ゴシック;
     font-weight: normal;
-    font-size: 23px;
+    font-size: 20px;
     color: #8a8062;
     letter-spacing: 0.1em;
     padding: 40px 0 100px 0;
@@ -461,10 +474,6 @@ html {
         display: block;
     }
 
-    .sp_background {
-        display: block;
-    }
-
     .sp_menubar {
         display: block;
     }
@@ -474,10 +483,6 @@ html {
     }
 
     .btn {
-        display: block;
-    }
-
-    .sp_nav {
         display: block;
     }
 
@@ -551,17 +556,9 @@ html {
         width: 100%;
     }
 
-    /* 全体にあてるコード */
-    /* .sp_menubar {
-        text-align: center;
-        margin: 0 auto;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: column;
-    }
- */
     .sp_logo {
-        max-width: 180px;
+        width: 50%;
+        padding: 25px 0 0 5%;
     }
 
     .sp_nav ul {
@@ -584,11 +581,6 @@ html {
         margin-right: 0;
     }
 
-    /* ハンバーガーメニュー */
-    /* .sp_nav {
-        display: none;
-    } */
-
     /* 三本ライン */
     .btn {
         display: block;
@@ -601,9 +593,9 @@ html {
 
     /* 三本ラインの真中の線 */
     .btn span {
-        background: #fff;
+        background: #000000;
         width: 33px;
-        height: 3px;
+        height: 2px;
         display: block;
         position: relative;
         top: 10px;
@@ -615,8 +607,8 @@ html {
     .btn span::after {
         content: '';
         width: 33px;
-        height: 3px;
-        background: #fff;
+        height: 2px;
+        background: #000000;
         display: block;
         position: absolute;
         transition: 0.3s;
@@ -664,21 +656,20 @@ html {
     /* 三本ライン開いた後のメニュー */
     .sp_nav li {
         text-align: center;
-        color: #fff;
+        color: #ffffff;
         font-size: 17px;
         padding: 10px 0;
         font-family: "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif;
     }
 
-    .sp_one {
+    /* プロフィールの外側 */
+    .sp_pf {
         text-align: center;
         margin: 0 auto;
-        justify-content: space-between;
-        display: flex;
-        flex-direction: column;
-        padding: 50px 0;
+        max-width: 180px;
     }
 
+    /* PROFILE */
     .sp_profile {
         font-family: 游明朝;
         font-size: 35px;
@@ -687,40 +678,213 @@ html {
         padding-top: 70px;
     }
 
+    /* プロフィール */
     .sp_pro {
         font-family: 游ゴシック;
         font-weight: normal;
         font-size: 15px;
         color: #000000;
         letter-spacing: 0.05em;
-        padding-top: 10px;
+        padding: 10px 0 40px 0;
     }
 
+    /* section one */
+    .sp_one {
+        text-align: center;
+        margin: 0 auto;
+        justify-content: space-between;
+        display: flex;
+        flex-direction: column;
+        padding: 50px 0;
+        background: #c9c9c9;
+    }
+
+    /* 全体の外側 */
     .sp_gray {
         background: c9c9c9;
         width: 100%;
     }
 
-
+    /* 1987年～文章 */
     .sp_oitach {
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        color: #000000;
+        letter-spacing: 0.05em;
+        line-height: 2em;
         text-align: left;
+        padding: 0 8% 40px;
+        box-sizing: border-box;
     }
 
+    /* コーヒーと焚火の写真２枚の外側 */
+    .sp_small_flame {
+        /* width: 100%; */
+        text-align: center;
+        margin: 0 auto;
+    }
 
+    /* コーヒーの写真 */
+    .sp_hot_coffee {
+        width: 100%;
+        text-align: left;
+        position: relative;
+        z-index: 1500;
+    }
 
+    /* 焚火の写真 */
+    .sp_fire {
+        width: 100%;
+        text-align: right;
+        margin-top: -70px;
+    }
 
+    /* キャンプ文章 */
+    .sp_camp {
+        padding: 50px 8% 40px;
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        color: #000000;
+        letter-spacing: 0.05em;
+        line-height: 2em;
+        text-align: left;
+        box-sizing: border-box;
+    }
 
+    /* ゴルフの写真 */
+    .sp_golf_play {
+        width: 100%;
+        text-align: center;
+    }
 
+    /* ゴルフ文章 */
+    .sp_golf {
+        padding: 50px 8% 40px;
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        color: #000000;
+        letter-spacing: 0.05em;
+        line-height: 2em;
+        text-align: left;
+        box-sizing: border-box;
+    }
 
+    /* 野球観戦の写真 */
+    .sp_baseball {
+        width: 100%;
+        text-align: center;
+    }
 
+    /* 野球文章 */
+    .sp_baseball_pro {
+        padding: 50px 8% 40px;
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        color: #000000;
+        letter-spacing: 0.05em;
+        line-height: 2em;
+        text-align: left;
+        box-sizing: border-box;
+    }
 
+    /* CONTACTより下全部の外側 */
+    .sp_two {
+        text-align: center;
+        margin: 0 auto;
+    }
 
+    /* CONTACT */
+    .sp_toi {
+        font-family: 游明朝;
+        font-size: 35px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        margin: 0 auto;
+        color: #8a8062;
+        padding-top: 70px;
+    }
 
+    /* ロゴ/チラシ～案内文 */
+    .sp_sigoto {
+        padding: 50px 8% 0;
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        color: #8a8062;
+        letter-spacing: 0.1em;
+        line-height: 1.67em;
+        text-align: center;
+        box-sizing: border-box;
+    }
 
+    /* ご相談～文章 */
+    .sp_irai {
+        padding: 40px 8% 80px;
+        font-family: 游ゴシック;
+        font-weight: normal;
+        font-size: 15px;
+        color: #8a8062;
+        letter-spacing: 0.1em;
+        text-align: center;
+        box-sizing: border-box;
+    }
 
+    /* お問合わせボタン */
+    /* .sp_more {
+        text-align: center;
+    } */
 
+    /* アニメーションボタン */
+    .sp_more {
+        background: #d3d3d3;
+        color: #000000;
+        border: none;
+        position: relative;
+        height: 60px;
+        font-size: 1.6em;
+        cursor: pointer;
+        transition: 800ms ease all;
+        outline: none;
+        font-family: 游明朝;
+        width: 60%;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+        letter-spacing: 0.1em;
+        display: block;
+        background: #c4b69a;
+        border-radius: 20px;
+        cursor: pointer;
+        border: none;
+        text-align: center;
+        margin: 40px auto 0;
+    }
 
+    .sp_more:hover {
+        background: #000000;
+        color: #c4b69a;
+    }
 
-    .sp_two {}
+    /* ↑ここまでアニメーションボタン */
 
+    .sp_footer_logo {
+        padding: 100px 8% 40px;
+        width: 60%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .sp_last {
+        font-family: 游明朝;
+        font-size: 14px;
+        letter-spacing: 0.1em;
+        text-align: center;
+        margin: 0 auto;
+        color: #000000;
+        padding-bottom: 30px;
+    }
 }

@@ -1,0 +1,8 @@
+14:27:19:100 [WARN]	proxy setting delay exceeds threshold: 0.574454 secs
+14:27:19:456 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+14:27:19:932 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+14:27:21:706 [WARN]	Request Failed. ErrorCode: 29 errorMessage: Timeout, Send Request Failed t=10889806
+16:51:20:721 [WARN]	proxy setting delay exceeds threshold: 0.648594 secs
+16:51:24:523 [WARN]	proxy setting delay exceeds threshold: 0.615397 secs
+20:38:11:380 [WARN]	Request Failed. ErrorCode: 112007 errorMessage: Platform Status, Send Request Failed. WinHTTP Name Not Resolved. last error code = 12007 
+20:38:14:156 [WARN]	Request Failed. ErrorCode: 29 errorMessage: Timeout, Send Request Failed t=3545905
