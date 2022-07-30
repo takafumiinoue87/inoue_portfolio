@@ -20,7 +20,7 @@ dd {
     padding: 0;
     line-height: 1;
     color: #000000;
-    font-family: "A1 Mincho", "游明朝", YuMincho, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", "Sheila", sans-serif;
+    font-family: "はれのそら明朝", "Sheila", "A1 Mincho", "游明朝", YuMincho, "Yu Gothic Medium", "游ゴシック Medium", YuGothic, "游ゴシック体", "ＭＳ Ｐ明朝", "MS PMincho", "MS 明朝", sans-serif;
     font-feature-settings: "palt";
 }
 
@@ -45,4 +45,54 @@ img {
     width: 100%;
     vertical-align: bottom;
     border: none;
+}
+
+
+/* ****************************************ここから************************************************************: */
+
+/* 外枠 */
+.thank_flame {
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+}
+
+/* firstview写真 */
+.thank_first {
+    width: 100%;
+    align-items: center;
+}
+
+/* ２つの文章の外枠 */
+.thank_you {
+    position: relative;
+}
+
+/* お問い合わせ～h1 */
+.thank_toi {
+    font-size: 40px;
+    font-family: はれのそら明朝;
+    z-index: 9000;
+    color: #000000;
+    /* position: absolute;
+    top: 0;
+    left: 0; */
+    margin-top: -50%;
+}
+
+/* 文章 */
+.thank_bun {
+    font-size: 20px;
+    font-family: はれのそら明朝;
+    z-index: 9000;
+    color: #000000;
+}
+
+/* Rise at... */
+.thank_logo {
+    width: 50%;
+    z-index: 9000;
+    margin-top: -5%;
 }

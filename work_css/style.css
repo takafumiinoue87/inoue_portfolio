@@ -103,112 +103,14 @@ body {
     flex-wrap: wrap;
     margin: 0 auto;
     padding: 0 30px;
+    width: 100%;
 }
 
 .job_work img {
     padding-bottom: 80px;
 }
 
-/* img :last-child {
-    padding-right: none;
-}
- */
 
-/* ul */
-/* .work_mockup {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
-}
- */
-/* li */
-/* .work_mockup li {
-    padding-right: 50px;
-    padding-bottom: 80px;
-    margin: 0 auto;
-}
-
-.work_mockup li :last-child {
-    padding-right: none;
-}
- */
-
-/* *************************************************************モーダルウィンドウ**************************************************************** */
-/* 
-img {
-    width: 100%;
-}
-
-.sample-item {
-    width: 30%;
-}
-
-
-.modal {
-    display: none;
-    height: 100vh;
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
-
-.modal__bg {
-    background: rgba(100, 100, 100, 0.9);
-    height: 100vh;
-    position: absolute;
-    width: 100%;
-}
-
-.modal__content {
-    left: 50%;
-    padding: 40px;
-    position: absolute;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    width: 70%;
-}
- */
-/* ****************************************************************************************************************************** */
-.menu_modal {
-    background: #a6b6bd;
-    max-width: 1000px;
-    display: flex;
-    flex-wrap: wrap;
-    font-family: 游ゴシック;
-    font-weight: normal;
-    font-size: 20px;
-    display: flex;
-}
-
-.daimei {
-    display: flex;
-    flex-direction: column;
-}
-
-.marukado .menu_a,
-.menu_b,
-.menu_c,
-.menu_d,
-.menu_e {
-    max-width: 155px;
-    height: 35px;
-    line-height: 35px;
-    letter-spacing: 0.1em;
-    display: block;
-    background: #dbdcdd;
-    color: #000000;
-    border-radius: 20px;
-    border: none;
-    margin: 0 auto 10px;
-    text-align: center;
-}
-
-.sen {
-    border-bottom: 2px solid red;
-}
-
-
-/* ************************************************************************************************************************************************** */
 
 /* BACKボタン外枠 */
 .bt {
@@ -356,11 +258,6 @@ img {
 /* スマホ対応↓ 767pxだがillustratorは375pxで作成375で数値等考えていい */
 @media screen and (max-width:767px) {
 
-
-    /*  .sp_work_mockup {
-        padding: 0 50px 0 100px;
-    }
- */
     /* WORK */
     .pc_flame_work {
         padding-bottom: 20px;
@@ -387,26 +284,12 @@ img {
         box-sizing: border-box;
         text-align: center;
         padding: 0 20px;
+        width: 100%;
     }
 
     .job_work img {
         padding-bottom: 30px;
     }
-
-
-    /*  .sp_work_mockup {
-        text-align: center;
-        display: block;
-    }
-
-    .sp_work_mockup li {
-        padding-bottom: 30px;
-        display: block;
-    } */
-
-    /* *************************************************************************** */
-
-    /* ************************************************************************** */
 
 
     .bt {

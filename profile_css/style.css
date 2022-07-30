@@ -728,7 +728,8 @@ html {
     /* コーヒーの写真 */
     .sp_hot_coffee {
         width: 100%;
-        text-align: left;
+        /* text-align: left; */
+        margin-right: 30%;
         position: relative;
         z-index: 1500;
     }
@@ -736,8 +737,9 @@ html {
     /* 焚火の写真 */
     .sp_fire {
         width: 100%;
-        text-align: right;
+        /* text-align: right; */
         margin-top: -70px;
+        margin-left: 30%;
     }
 
     /* キャンプ文章 */
@@ -776,6 +778,10 @@ html {
     .sp_baseball {
         width: 100%;
         text-align: center;
+    }
+
+    .baseball {
+        display: none;
     }
 
     /* 野球文章 */
